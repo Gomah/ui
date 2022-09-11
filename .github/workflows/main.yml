@@ -1,0 +1,46 @@
+name: 'All: Tests'
+on: push
+jobs:
+  test:
+    name: All tests
+    timeout-minutes: 20
+    runs-on: ubuntu-latest
+
+    env:
+      APPLICATION_ENVIRONMENT: 'CI'
+      NEXT_PUBLIC_APPLICATION_ENVIRONMENT: 'CI'
+      TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+      TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 2
+
+      - name: Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          cache: 'yarn'
+
+      - name: Get yarn cache directory path
+        id: yarn-cache-dir-path
+        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
+
+      - uses: actions/cache@v3
+        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
+        with:
+          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-yarn-
+
+      - name: Install
+        run: yarn install
+
+      - name: Build
+        run: npx turbo run build
+
+      # - name: Tests
+      #   run: yarn run test
