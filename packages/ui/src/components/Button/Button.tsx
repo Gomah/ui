@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: React.ReactNode;
@@ -7,19 +7,12 @@ export interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElemen
 }
 
 export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  (
-    {
-      children,
-      className = '',
-      loading,
-      ...props
-    },
-    ref
-  ) => {
-
-    return <button ref={ref as React.ForwardedRef<HTMLButtonElement>} {...props}>
-       {children}
-        </button>
+  ({ children, className = '', loading, ...props }, ref) => {
+    return (
+      <button ref={ref as React.ForwardedRef<HTMLButtonElement>} {...props}>
+        {children}
+      </button>
+    );
   }
 );
 
