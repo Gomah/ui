@@ -11,7 +11,7 @@
   "dependencies": {
     "@acme/react": "*",
     "@heroicons/react": "2.0.11",
-    "autoprefixer": "10.4.10",
+    "autoprefixer": "10.4.11",
     "next": "12.3.0",
     "postcss": "8.4.16",
     "react": "18.2.0",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "@acme/tokens": "*",
-    "@babel/core": "7.19.0",
+    "@babel/core": "7.19.1",
     "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "eslint": "8.23.1",
