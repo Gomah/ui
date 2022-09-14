@@ -42,5 +42,5 @@ jobs:
       - name: Build
         run: npx turbo run build
 
-      # - name: Tests
-      #   run: yarn run test
+      - name: Tests
+        run: yarn run test

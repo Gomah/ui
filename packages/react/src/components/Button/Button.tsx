@@ -4,26 +4,27 @@ import { twMerge } from 'tailwind-merge';
 import { Ring } from '@uiball/loaders';
 
 export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
-  children?: React.ReactNode;
-
   /**
    * Leading icon
+   * @usage <Button leadingIcon={<Home className="h-4 w-4" />}>Button</Button>
    */
   leadingIcon?: React.ReactNode;
 
   /**
    * Trailing icon
-   * @usage <Button trailingIcon={<}></Button>
+   * @usage <Button trailingIcon={<Home className="h-4 w-4" />}>Button</Button>
    */
   trailingIcon?: React.ReactNode;
 
   /**
    * Defines size of the button
+   * @usage <Button size="sm">Button</Button>
    */
   size?: ButtonSize;
 
   /**
    * Defines variant of the button
+   * @usage <Button variant="primary">Button</Button>
    */
   variant?: ButtonVariant;
 
@@ -36,6 +37,11 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
    * Loading state
    */
   loading?: boolean;
+
+  /**
+   * Full width?
+   */
+  fullWidth?: boolean;
 }
 
 const styles = /*tw*/ {
@@ -54,12 +60,14 @@ const styles = /*tw*/ {
     warning: 'bg-warning-600 text-white hover:bg-warning-700',
     success: 'bg-success-600 text-white hover:bg-success-700',
   },
+
+  shadow: 'shadow-xs',
 };
 
 export type ButtonSize = keyof typeof styles.size;
 export type ButtonVariant = keyof typeof styles.variant;
 
-export const Button = React.forwardRef<React.ComponentPropsWithRef<'button'>, ButtonProps>(
+export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildren<ButtonProps>>(
   (
     {
       children,
@@ -68,6 +76,7 @@ export const Button = React.forwardRef<React.ComponentPropsWithRef<'button'>, Bu
       leadingIcon,
       loading,
       trailingIcon,
+      fullWidth,
       variant = 'primary',
       rounded,
       ...props
@@ -76,13 +85,12 @@ export const Button = React.forwardRef<React.ComponentPropsWithRef<'button'>, Bu
   ) => {
     const buttonClasses = twMerge(
       clsx(
-        // Apply variant
-        styles.variant[variant],
-        // Apply size
-        styles.size[size],
+        styles.variant[variant], // Apply variant style
+        styles.size[size], // Apply size style
         rounded ? 'rounded-full' : 'rounded-lg',
         !!leadingIcon || !!trailingIcon ? 'inline-flex items-center space-x-2' : '',
-        'shadow-xs'
+        styles.shadow, // Apply shadow
+        fullWidth && 'w-full'
       ),
       className
     );

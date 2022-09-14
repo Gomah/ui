@@ -10,7 +10,7 @@ export interface SelectProps extends React.ComponentPropsWithRef<'div'> {
   displayKey: string;
 }
 
-export const Select = React.forwardRef<React.ComponentPropsWithRef<'div'>, SelectProps>(
+export const Select = React.forwardRef<HTMLDivElement, SelectProps>(
   (
     { by, onChange, options, displayKey, selectedKey, placeholder, className = '', ...props },
     ref
