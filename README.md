@@ -75,3 +75,18 @@ Learn more about the power of Turborepo:
 - [Scoped Tasks](https://turborepo.org/docs/core-concepts/scopes)
 - [Configuration Options](https://turborepo.org/docs/reference/configuration)
 - [CLI Usage](https://turborepo.org/docs/reference/command-line-reference)
+
+
+### Todo
+
+- Define foundations (tokens), although TailwindCSS have pretty good defaults.
+
+### Questions
+
+Use tailwindcss or Vanilla extract?
+Use radix?
+Use twmerge (if using tailwindcss ?)
+Use css module (if using tailwindcss?)?
+How to make it customisable ? Probably need to make something work first to then think about it
+package.json per component?
+Tree-shaking

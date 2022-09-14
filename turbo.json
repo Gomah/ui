@@ -8,9 +8,15 @@
     "lint": {
       "outputs": []
     },
-    "ui#build": {
+
+    "@acme/tokens#build": {
       "dependsOn": ["^build"],
       "outputs": ["dist/**"]
+    },
+
+    "@acme/react#build": {
+      "dependsOn": ["^build", "@acme/tokens#build"],
+      "outputs": ["dist/**", "build/**"]
     },
 
     "dev": {
