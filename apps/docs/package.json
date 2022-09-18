@@ -19,14 +19,14 @@
     "tailwindcss": "3.1.8"
   },
   "devDependencies": {
+    "@acme/eslint-config-custom": "*",
     "@acme/tokens": "*",
+    "@acme/tsconfig": "*",
     "@babel/core": "7.19.1",
     "@types/node": "18.7.18",
     "@types/react": "18.0.20",
     "eslint": "8.23.1",
-    "eslint-config-custom": "*",
     "next-transpile-modules": "9.0.0",
-    "tsconfig": "*",
     "typescript": "4.8.3"
   }
 }

@@ -13,11 +13,11 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
+    "@acme/eslint-config-custom": "*",
     "@commitlint/cli": "17.1.2",
     "@commitlint/config-conventional": "17.1.0",
-    "eslint-config-custom": "*",
     "prettier": "2.7.1",
-    "turbo": "1.4.6"
+    "turbo": "1.4.7"
   },
   "engines": {
     "npm": ">=7.0.0",

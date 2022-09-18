@@ -1,4 +1,10 @@
 {
+  "workbench.colorCustomizations": {
+    "titleBar.activeForeground": "#F5F8FF",
+    "titleBar.inactiveForeground": "#F5F8FF",
+    "titleBar.activeBackground": "#155EEF",
+    "titleBar.inactiveBackground": "#155EEF"
+  },
   "typescript.tsdk": "node_modules/typescript/lib",
   "tailwindCSS.experimental.classRegex": [
     ["/\\*tw\\*/ ([^;]*);", "'([^']*)'"],
