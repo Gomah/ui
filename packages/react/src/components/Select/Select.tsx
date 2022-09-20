@@ -32,7 +32,8 @@ function _select<T>(
 ) {
   const selectedOption = React.useMemo(() => {
     return Array.isArray(selected)
-      ? options.filter((option) => selected?.includes(option[by]))
+      ? // @ts-ignore
+        options.filter((option) => selected?.includes(option[by]))
       : options.find((option) => option[by] === selected);
   }, [by, selected, options]);
 
@@ -46,7 +47,8 @@ function _select<T>(
 
   return (
     <Listbox
-      ref={ref}
+      // @ts-ignore
+      ref={ref as any}
       by={by as string}
       value={selectedOption}
       multiple={multiple}
@@ -55,6 +57,7 @@ function _select<T>(
     >
       <div className="relative mt-1">
         <Listbox.Button className={buttonClassNames}>
+          {/* @ts-ignore */}
           <span className="block truncate">{selectedOption?.[displayKey] || placeholder}</span>
           <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
             <ChevronUpDownIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
@@ -69,6 +72,7 @@ function _select<T>(
           <Listbox.Options className={optionsClassNames}>
             {options.map((option: T) => (
               <Listbox.Option
+                // @ts-ignore
                 key={option[by]}
                 value={option}
                 className={({ active }) =>
@@ -81,6 +85,7 @@ function _select<T>(
                 {({ selected }) => (
                   <>
                     <span className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
+                      {/* @ts-ignore */}
                       {option[displayKey]}
                     </span>
                     {selected ? (
@@ -100,7 +105,7 @@ function _select<T>(
 }
 
 // Select.displayName = 'Select';
-
+// @ts-ignore
 export const Select = React.forwardRef(_select) as <T>(
   props: SelectProps<T> & { ref?: React.ForwardedRef<HTMLDivElement> }
 ) => ReturnType<typeof _select>;

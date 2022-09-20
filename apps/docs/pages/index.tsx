@@ -1,4 +1,4 @@
-import { Button, Switch, Select } from '@acme/react';
+import { Button, Badge, Switch, Select } from '@acme/react';
 import { BeakerIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 
@@ -15,6 +15,9 @@ export default function Docs() {
 
   return (
     <div className="container mx-auto my-20 max-w-lg space-y-10">
+      <div>
+        <Badge>Label</Badge>
+      </div>
       <div>
         <Button trailingIcon={<BeakerIcon className="h-5 w-5" />}>Submit</Button>
       </div>

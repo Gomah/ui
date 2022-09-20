@@ -6,6 +6,9 @@ module.exports = {
   content: ['./src/**/*.{js,ts,css,jsx,tsx}'],
   theme: {
     extend: {
+      ringWidth: {
+        '1.5': '1.5px',
+      },
       colors: {
         ...tokens.colors,
       },

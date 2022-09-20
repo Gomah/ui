@@ -3,7 +3,7 @@ import { Select, SelectProps } from './Select';
 import type { Story } from '@ladle/react';
 import { useState } from 'react';
 
-export const Examples: Story<SelectProps<string>> = (props) => {
+export const Examples: Story<SelectProps<Record<string, string>>> = (props) => {
   const options = [
     { id: '1', value: 'One', description: 'This is number one' },
     { id: '2', value: 'Two', description: 'This is number two' },
@@ -17,14 +17,13 @@ export const Examples: Story<SelectProps<string>> = (props) => {
         <div className="space-x-4">
           <Select
             options={options}
-            by="id"
-            displayKey="value"
             selected={favouriteNumber}
             placeholder="Please select"
             onChange={(option) => {
               action('onChange');
               setFavouriteNumber(option.id);
             }}
+            {...props}
           />
         </div>
       </div>
@@ -39,6 +38,10 @@ Examples.args = {
   by: 'id',
   displayKey: 'value',
   variant: 'primary',
+  // options: [
+  //   { id: '1', value: 'One', description: 'This is number one' },
+  //   { id: '2', value: 'Two', description: 'This is number two' },
+  // ],
 };
 
 Examples.argTypes = {
