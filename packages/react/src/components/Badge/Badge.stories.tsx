@@ -19,6 +19,8 @@ Examples.args = {
   size: 'md',
   variant: 'gray',
   outlined: false,
+  closable: false,
+  withDot: true,
 };
 
 Examples.argTypes = {
