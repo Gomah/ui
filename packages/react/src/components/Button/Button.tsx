@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { Ring } from '@uiball/loaders';
+import type { ReactTag } from '@headlessui/react/dist/types';
 
 export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
   /**
@@ -9,6 +10,8 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
    * @usage <Button leadingIcon={<Home className="h-4 w-4" />}>Button</Button>
    */
   leadingIcon?: React.ReactNode;
+
+  as?: ReactTag;
 
   /**
    * Trailing icon

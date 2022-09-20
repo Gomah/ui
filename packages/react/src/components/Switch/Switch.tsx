@@ -18,6 +18,7 @@ export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
     return (
       // @ts-ignore
       <HeadlessSwitch
+        ref={ref}
         {...props}
         checked={checked}
         onChange={onChange}

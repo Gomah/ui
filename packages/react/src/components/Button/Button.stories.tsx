@@ -19,6 +19,7 @@ export const Examples: Story<ButtonProps> = (props) => {
 Examples.args = {
   rounded: false,
   loading: false,
+  fullWidth: false,
   size: 'md',
   variant: 'primary',
 };

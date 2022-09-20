@@ -4,7 +4,9 @@ import { useState } from 'react';
 
 export default function Docs() {
   const [enabled, setEnabled] = useState(false);
-  const [favouriteNumber, setFavouriteNumber] = useState('1');
+  const [favouriteNumber, setFavouriteNumber] = useState('');
+
+  type Option = { id: string; value: string; description: string };
 
   const options = [
     { id: '1', value: 'One', description: 'This is number one' },
@@ -22,9 +24,10 @@ export default function Docs() {
       <Select
         options={options}
         by="id"
-        displayKey="description"
-        selectedKey={favouriteNumber}
-        onChange={(option: any) => {
+        displayKey="value"
+        selected={favouriteNumber}
+        placeholder="Please select"
+        onChange={(option) => {
           setFavouriteNumber(option.id);
         }}
       />
