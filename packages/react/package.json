@@ -6,7 +6,8 @@
   "license": "MIT",
   "scripts": {
     "dev": "FORCE_COLOR=1 ladle serve",
-    "build": "tsup index.tsx --format esm,cjs --external react --dts",
+    "build": "yarn build:components && yarn build:ladle",
+    "build:components": "tsup index.tsx --format esm,cjs --external react --dts",
     "build:ladle": "ladle build",
     "test": "vitest run"
   },
