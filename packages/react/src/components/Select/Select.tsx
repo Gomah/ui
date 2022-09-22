@@ -5,14 +5,14 @@ import clsx from 'clsx';
 
 export interface SelectProps<T> extends Omit<React.ComponentPropsWithRef<'div'>, 'onChange'> {
   options: T[];
-  by: keyof T;
+  by?: keyof T;
+  displayKey?: keyof T;
   selected?: string | string[];
   placeholder?: string;
   className?: string;
   disabled?: boolean;
   multiple?: boolean;
   onChange?: (option: T) => void;
-  displayKey: keyof T;
 }
 
 function _select<T>(
@@ -33,8 +33,8 @@ function _select<T>(
   const selectedOption = React.useMemo(() => {
     return Array.isArray(selected)
       ? // @ts-ignore
-        options.filter((option) => selected?.includes(option[by]))
-      : options.find((option) => option[by] === selected);
+        options.filter((option) => selected?.includes(by ? option[by] : option))
+      : options.find((option) => (by ? option[by] : option === selected));
   }, [by, selected, options]);
 
   const buttonClassNames = clsx(
@@ -48,7 +48,7 @@ function _select<T>(
   return (
     <Listbox
       // @ts-ignore
-      ref={ref as any}
+      ref={ref}
       by={by as string}
       value={selectedOption}
       multiple={multiple}
@@ -58,7 +58,11 @@ function _select<T>(
       <div className="relative mt-1">
         <Listbox.Button className={buttonClassNames}>
           {/* @ts-ignore */}
-          <span className="block truncate">{selectedOption?.[displayKey] || placeholder}</span>
+          <span className="block truncate">
+            {!!displayKey
+              ? selectedOption?.[displayKey]
+              : selectedOption?.join(', ') || placeholder}
+          </span>
           <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
             <ChevronUpDownIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
           </span>
@@ -73,7 +77,7 @@ function _select<T>(
             {options.map((option: T) => (
               <Listbox.Option
                 // @ts-ignore
-                key={option[by]}
+                key={by ? option[by] : option}
                 value={option}
                 className={({ active }) =>
                   clsx(
@@ -86,7 +90,7 @@ function _select<T>(
                   <>
                     <span className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}>
                       {/* @ts-ignore */}
-                      {option[displayKey]}
+                      {displayKey ? option[displayKey] : option}
                     </span>
                     {selected ? (
                       <span className="absolute inset-y-0 left-0 flex items-center pl-3 text-primary-600">
