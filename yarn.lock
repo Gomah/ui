@@ -38,7 +38,7 @@ __metadata:
     "@types/react": 18.0.20
     "@types/react-dom": 18.0.6
     "@uiball/loaders": 1.2.6
-    autoprefixer: 10.4.11
+    autoprefixer: 10.4.12
     clsx: 1.2.1
     eslint: 8.23.1
     framer-motion: 7.3.6
@@ -3103,12 +3103,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"autoprefixer@npm:10.4.11":
-  version: 10.4.11
-  resolution: "autoprefixer@npm:10.4.11"
+"autoprefixer@npm:10.4.12":
+  version: 10.4.12
+  resolution: "autoprefixer@npm:10.4.12"
   dependencies:
-    browserslist: ^4.21.3
-    caniuse-lite: ^1.0.30001399
+    browserslist: ^4.21.4
+    caniuse-lite: ^1.0.30001407
     fraction.js: ^4.2.0
     normalize-range: ^0.1.2
     picocolors: ^1.0.0
@@ -3117,7 +3117,7 @@ __metadata:
     postcss: ^8.1.0
   bin:
     autoprefixer: bin/autoprefixer
-  checksum: fb8b2abbb0ce5e3c6bc957ffb714b84aa2e6a9f24cf9c139bcfec33ba5e3334f61a132c606a621e04097d026c1f653fe1bda2d1c3dc47b87c9f6b00d90732daa
+  checksum: 6ae79cbacd31fb3d464ec64eb6ad2600f4f689c3080bbe62c5536d539b41b472083a2e941ef99d14aa11142370d6c16e8b05a62f077374933ed991aceb5943d2
   languageName: node
   linkType: hard
 
@@ -3281,17 +3281,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"browserslist@npm:^4.21.3":
-  version: 4.21.3
-  resolution: "browserslist@npm:4.21.3"
+"browserslist@npm:^4.21.3, browserslist@npm:^4.21.4":
+  version: 4.21.4
+  resolution: "browserslist@npm:4.21.4"
   dependencies:
-    caniuse-lite: ^1.0.30001370
-    electron-to-chromium: ^1.4.202
+    caniuse-lite: ^1.0.30001400
+    electron-to-chromium: ^1.4.251
     node-releases: ^2.0.6
-    update-browserslist-db: ^1.0.5
+    update-browserslist-db: ^1.0.9
   bin:
     browserslist: cli.js
-  checksum: ff512a7bcca1c530e2854bbdfc7be2791d0fb524097a6340e56e1d5924164c7e4e0a9b070de04cdc4c149d15cb4d4275cb7c626ebbce954278a2823aaad2452a
+  checksum: 4af3793704dbb4615bcd29059ab472344dc7961c8680aa6c4bb84f05340e14038d06a5aead58724eae69455b8fade8b8c69f1638016e87e5578969d74c078b79
   languageName: node
   linkType: hard
 
@@ -3404,10 +3404,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001370, caniuse-lite@npm:^1.0.30001399, caniuse-lite@npm:^1.0.30001406":
-  version: 1.0.30001406
-  resolution: "caniuse-lite@npm:1.0.30001406"
-  checksum: 1ae9701f0c58462f93add1236ed88f51ce3d7939f57afcde720763d1b18f78aa9afb0bfda620d47a32f5e14661e506037835e441ca4437cb821f4bba7bd7bcf8
+"caniuse-lite@npm:^1.0.30001400, caniuse-lite@npm:^1.0.30001406, caniuse-lite@npm:^1.0.30001407":
+  version: 1.0.30001407
+  resolution: "caniuse-lite@npm:1.0.30001407"
+  checksum: e1c449d22f120a708accc956c1780f1da01af6c226cb6a324e531dc9f26f53075bff98e6c9cfce806157cdeede459aa8de03a3407b05f71d292a57b2910018b1
   languageName: node
   linkType: hard
 
@@ -4067,7 +4067,7 @@ __metadata:
     "@heroicons/react": 2.0.11
     "@types/node": 18.7.18
     "@types/react": 18.0.20
-    autoprefixer: 10.4.11
+    autoprefixer: 10.4.12
     eslint: 8.23.1
     next: 12.3.1
     next-transpile-modules: 9.0.0
@@ -4136,10 +4136,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-to-chromium@npm:^1.4.202":
-  version: 1.4.247
-  resolution: "electron-to-chromium@npm:1.4.247"
-  checksum: cbe17a6164f5baceb91b09d7d0f09b3d2ce1f0fc3a3c2494622694cb518aa5192cf490aac597ee6dc4cbfb004109d0a214b465c9047e53130a89282aa14b752e
+"electron-to-chromium@npm:^1.4.251":
+  version: 1.4.256
+  resolution: "electron-to-chromium@npm:1.4.256"
+  checksum: 878ca8e33a05165808a662b52ac332a42a5fcf842540de38c4cdde462e4c2cb2f2c10c4864cd44c486f8470f88818f42d275774865666aad424e1e4f500d91e8
   languageName: node
   linkType: hard
 
@@ -7856,7 +7856,7 @@ __metadata:
     "@commitlint/cli": 17.1.2
     "@commitlint/config-conventional": 17.1.0
     prettier: 2.7.1
-    turbo: 1.4.7
+    turbo: 1.5.1
   languageName: unknown
   linkType: soft
 
@@ -8724,146 +8724,66 @@ __metadata:
   languageName: node
   linkType: hard
 
-"turbo-android-arm64@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-android-arm64@npm:1.4.7"
-  conditions: os=android & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"turbo-darwin-64@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-darwin-64@npm:1.4.7"
+"turbo-darwin-64@npm:1.5.1":
+  version: 1.5.1
+  resolution: "turbo-darwin-64@npm:1.5.1"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-darwin-arm64@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-darwin-arm64@npm:1.4.7"
+"turbo-darwin-arm64@npm:1.5.1":
+  version: 1.5.1
+  resolution: "turbo-darwin-arm64@npm:1.5.1"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-freebsd-64@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-freebsd-64@npm:1.4.7"
-  conditions: os=freebsd & cpu=x64
-  languageName: node
-  linkType: hard
-
-"turbo-freebsd-arm64@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-freebsd-arm64@npm:1.4.7"
-  conditions: os=freebsd & cpu=arm64
-  languageName: node
-  linkType: hard
-
-"turbo-linux-32@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-linux-32@npm:1.4.7"
-  conditions: os=linux & cpu=ia32
-  languageName: node
-  linkType: hard
-
-"turbo-linux-64@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-linux-64@npm:1.4.7"
+"turbo-linux-64@npm:1.5.1":
+  version: 1.5.1
+  resolution: "turbo-linux-64@npm:1.5.1"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-linux-arm64@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-linux-arm64@npm:1.4.7"
+"turbo-linux-arm64@npm:1.5.1":
+  version: 1.5.1
+  resolution: "turbo-linux-arm64@npm:1.5.1"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-linux-arm@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-linux-arm@npm:1.4.7"
-  conditions: os=linux & cpu=arm
-  languageName: node
-  linkType: hard
-
-"turbo-linux-mips64le@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-linux-mips64le@npm:1.4.7"
-  conditions: os=linux & cpu=mipsel
-  languageName: node
-  linkType: hard
-
-"turbo-linux-ppc64le@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-linux-ppc64le@npm:1.4.7"
-  conditions: os=linux & cpu=ppc64
-  languageName: node
-  linkType: hard
-
-"turbo-windows-32@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-windows-32@npm:1.4.7"
-  conditions: os=win32 & cpu=ia32
-  languageName: node
-  linkType: hard
-
-"turbo-windows-64@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-windows-64@npm:1.4.7"
+"turbo-windows-64@npm:1.5.1":
+  version: 1.5.1
+  resolution: "turbo-windows-64@npm:1.5.1"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-windows-arm64@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo-windows-arm64@npm:1.4.7"
+"turbo-windows-arm64@npm:1.5.1":
+  version: 1.5.1
+  resolution: "turbo-windows-arm64@npm:1.5.1"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo@npm:1.4.7":
-  version: 1.4.7
-  resolution: "turbo@npm:1.4.7"
+"turbo@npm:1.5.1":
+  version: 1.5.1
+  resolution: "turbo@npm:1.5.1"
   dependencies:
-    turbo-android-arm64: 1.4.7
-    turbo-darwin-64: 1.4.7
-    turbo-darwin-arm64: 1.4.7
-    turbo-freebsd-64: 1.4.7
-    turbo-freebsd-arm64: 1.4.7
-    turbo-linux-32: 1.4.7
-    turbo-linux-64: 1.4.7
-    turbo-linux-arm: 1.4.7
-    turbo-linux-arm64: 1.4.7
-    turbo-linux-mips64le: 1.4.7
-    turbo-linux-ppc64le: 1.4.7
-    turbo-windows-32: 1.4.7
-    turbo-windows-64: 1.4.7
-    turbo-windows-arm64: 1.4.7
+    turbo-darwin-64: 1.5.1
+    turbo-darwin-arm64: 1.5.1
+    turbo-linux-64: 1.5.1
+    turbo-linux-arm64: 1.5.1
+    turbo-windows-64: 1.5.1
+    turbo-windows-arm64: 1.5.1
   dependenciesMeta:
-    turbo-android-arm64:
-      optional: true
     turbo-darwin-64:
       optional: true
     turbo-darwin-arm64:
       optional: true
-    turbo-freebsd-64:
-      optional: true
-    turbo-freebsd-arm64:
-      optional: true
-    turbo-linux-32:
-      optional: true
     turbo-linux-64:
       optional: true
-    turbo-linux-arm:
-      optional: true
     turbo-linux-arm64:
-      optional: true
-    turbo-linux-mips64le:
-      optional: true
-    turbo-linux-ppc64le:
-      optional: true
-    turbo-windows-32:
       optional: true
     turbo-windows-64:
       optional: true
@@ -8871,7 +8791,7 @@ __metadata:
       optional: true
   bin:
     turbo: bin/turbo
-  checksum: 62ab97bfa2ddf8b8b654f6c61c2fa0995bbbb9a374e613ec932edc45781796a1cf1755d8dd9b070304aae44a5391d3dcaa40e1592bc24ce07d515ed016913f5c
+  checksum: 6e728a58624004ace86d8ab7fcd90a8e5fc306c9aaa1bfa3b8fd986337aa1b14febe554d3b7c0d80b2c7a5e47f474538d9eae410fb5f430b55888f8e9086541f
   languageName: node
   linkType: hard
 
@@ -9054,9 +8974,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"update-browserslist-db@npm:^1.0.5":
-  version: 1.0.7
-  resolution: "update-browserslist-db@npm:1.0.7"
+"update-browserslist-db@npm:^1.0.9":
+  version: 1.0.9
+  resolution: "update-browserslist-db@npm:1.0.9"
   dependencies:
     escalade: ^3.1.1
     picocolors: ^1.0.0
@@ -9064,7 +8984,7 @@ __metadata:
     browserslist: ">= 4.21.0"
   bin:
     browserslist-lint: cli.js
-  checksum: 443ed6e77d4607b8bdf12710fe1c0b570fcbb992ebcafaa0c647811e5646fa51e0b5a17641637e10044e4b770bfc3a9ce2a9350a646477545aed882a1fcff8ce
+  checksum: f625899b236f6a4d7f62b56be1b8da230c5563d1fef84d3ef148f2e1a3f11a5a4b3be4fd7e3703e51274c116194017775b10afb4de09eb2c0d09d36b90f1f578
   languageName: node
   linkType: hard
 
