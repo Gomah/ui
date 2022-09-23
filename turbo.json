@@ -14,8 +14,13 @@
       "outputs": ["dist/**"]
     },
 
-    "@acme/react#build": {
+    "@acme/tailwind-preset#build": {
       "dependsOn": ["^build", "@acme/tokens#build"],
+      "outputs": ["dist/**"]
+    },
+
+    "@acme/react#build": {
+      "dependsOn": ["^build", "@acme/tokens#build", "@acme/tailwind-preset#build"],
       "outputs": ["dist/**", "build/**"]
     },
 

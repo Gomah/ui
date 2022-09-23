@@ -1,6 +1,7 @@
 {
   "name": "@acme/react",
   "version": "0.0.0",
+  "sideEffects": false,
   "main": "./index.tsx",
   "types": "./index.tsx",
   "license": "MIT",
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@acme/eslint-config-custom": "*",
+    "@acme/tailwind-preset": "*",
     "@acme/tokens": "*",
     "@acme/tsconfig": "*",
     "@swc/core": "1.3.2",
