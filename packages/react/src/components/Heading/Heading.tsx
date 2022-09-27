@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import * as React from 'react';
+import { twMerge } from 'tailwind-merge';
 
 const styles = /*tw*/ {
   size: {
@@ -29,7 +30,7 @@ export interface HeadingProps extends React.ComponentPropsWithRef<'h1'> {
 
 export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
   ({ children, size = 'xs', weight = 'regular', className, ...props }, ref) => {
-    const headingClass = clsx(styles.size[size], styles.weight[weight], className);
+    const headingClass = twMerge(clsx(styles.size[size], styles.weight[weight], className));
 
     return (
       <h1 ref={ref} {...props} className={headingClass}>

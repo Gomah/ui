@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
 import clsx from 'clsx';
+import { twMerge } from 'tailwind-merge';
 
 export interface SelectProps<T> extends Omit<React.ComponentPropsWithRef<'div'>, 'onChange'> {
   options: T[];
@@ -25,7 +26,7 @@ function _select<T>(
     multiple,
     selected,
     placeholder = 'Select',
-    className = '',
+    className,
     ...props
   }: SelectProps<T>,
   ref: React.ForwardedRef<HTMLDivElement>
@@ -37,8 +38,11 @@ function _select<T>(
       : options.find((option) => (by ? option[by] : option === selected));
   }, [by, selected, options]);
 
-  const buttonClassNames = clsx(
-    'relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-300 sm:text-sm'
+  const buttonClassNames = twMerge(
+    clsx(
+      'relative w-full cursor-default rounded-lg bg-white py-2 pl-3 pr-10 text-left shadow-md focus:outline-none focus-visible:border-primary-500 focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 focus-visible:ring-offset-2 focus-visible:ring-offset-primary-300 sm:text-sm'
+    ),
+    className
   );
 
   const optionsClassNames = clsx(

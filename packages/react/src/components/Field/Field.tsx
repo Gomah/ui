@@ -1,6 +1,7 @@
 import { ExclamationCircleIcon } from '@heroicons/react/20/solid';
 import clsx from 'clsx';
 import * as React from 'react';
+import { twMerge } from 'tailwind-merge';
 
 const styles = /*tw*/ {
   size: {
@@ -28,7 +29,7 @@ const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
   (
     {
       variant = 'primary',
-      className = '',
+      className,
       label,
       htmlFor,
       children,
@@ -39,7 +40,7 @@ const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
     },
     ref
   ) => {
-    const fieldClass = clsx(styles.size[size]);
+    const fieldClass = twMerge(clsx(styles.size[size]), className);
     const labelClass = clsx(['block  font-medium text-gray-700']);
     const inputWrapperClass = clsx('relative mt-1.5');
 

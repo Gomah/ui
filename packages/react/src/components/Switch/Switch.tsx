@@ -14,7 +14,7 @@ export interface SwitchProps extends Omit<React.ComponentPropsWithRef<'button'>,
 // } & Omit<React.ComponentPropsWithRef<'button'>, 'onChange'>;
 
 export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
-  ({ children, checked, onChange, className = '', ...props }, ref) => {
+  ({ children, checked, onChange, className, ...props }, ref) => {
     return (
       // @ts-ignore
       <HeadlessSwitch

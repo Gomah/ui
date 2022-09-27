@@ -1,7 +1,5 @@
-import { Button, Badge, Link, Switch, Select, Heading, Text, Field, Input } from '@acme/react';
+import { Button, Link, Heading, Text, Field, Input } from '@acme/react';
 import NextLink from 'next/link';
-import { BeakerIcon } from '@heroicons/react/24/solid';
-import { useState } from 'react';
 
 export default function Auth() {
   return (
