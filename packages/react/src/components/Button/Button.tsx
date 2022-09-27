@@ -93,7 +93,8 @@ export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildre
         rounded ? 'rounded-full' : 'rounded-lg',
         !!leadingIcon || !!trailingIcon ? 'inline-flex items-center space-x-2' : '',
         styles.shadow, // Apply shadow
-        fullWidth && 'w-full'
+        fullWidth && 'w-full',
+        'font-medium'
       ),
       className
     );

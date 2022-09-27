@@ -1,4 +1,5 @@
-import { Button, Badge, Switch, Select } from '@acme/react';
+import { Heading, Link } from '@acme/react';
+import NextLink from 'next/link';
 import { BeakerIcon } from '@heroicons/react/24/solid';
 import { useState } from 'react';
 
@@ -17,23 +18,11 @@ export default function Docs() {
 
   return (
     <div className="container mx-auto my-20 max-w-lg space-y-10">
-      <div>
-        <Badge>Label</Badge>
-      </div>
-      <div>
-        <Button trailingIcon={<BeakerIcon className="h-5 w-5" />}>Submit</Button>
-      </div>
+      <Heading>Auth</Heading>
 
-      <Switch checked={enabled} onChange={(value) => setEnabled(value)} />
-
-      <Select
-        options={options}
-        selected={favouriteNumber}
-        placeholder="Please select"
-        onChange={(option) => {
-          setFavouriteNumber(option);
-        }}
-      />
+      <NextLink href="/auth/login/simple" passHref>
+        <Link>Login – Simple</Link>
+      </NextLink>
     </div>
   );
 }
