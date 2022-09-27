@@ -27,7 +27,7 @@ export interface TextProps extends React.ComponentPropsWithRef<'p'> {
 
 export const Text = React.forwardRef<HTMLParagraphElement, TextProps>(
   ({ size = 'md', weight = 'regular', className, children, ...props }, ref) => {
-    const textClass = clsx('text-gray-900', styles.size[size], styles.weight[weight], className);
+    const textClass = clsx('text-gray-600', styles.size[size], styles.weight[weight], className);
 
     return (
       <p ref={ref} {...props} className={textClass}>

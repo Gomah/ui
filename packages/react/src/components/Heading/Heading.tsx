@@ -10,17 +10,26 @@ const styles = /*tw*/ {
     xl: 'text-6xl',
     '2xl': 'text-7xl',
   },
+
+  weight: {
+    regular: 'font-normal',
+    medium: 'font-medium',
+    semibold: 'font-semibold',
+    bold: 'font-bold',
+  },
 };
 
 export type HeadingSize = keyof typeof styles.size;
+export type HeadingWeigh = keyof typeof styles.weight;
 
 export interface HeadingProps extends React.ComponentPropsWithRef<'h1'> {
   size?: HeadingSize;
+  weight?: HeadingWeigh;
 }
 
 export const Heading = React.forwardRef<HTMLHeadingElement, HeadingProps>(
-  ({ children, size = 'xs', className, ...props }, ref) => {
-    const headingClass = clsx(styles.size[size], className);
+  ({ children, size = 'xs', weight = 'regular', className, ...props }, ref) => {
+    const headingClass = clsx(styles.size[size], styles.weight[weight], className);
 
     return (
       <h1 ref={ref} {...props} className={headingClass}>

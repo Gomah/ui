@@ -20,6 +20,7 @@
   },
   "devDependencies": {
     "@acme/eslint-config-custom": "*",
+    "@acme/tailwind-preset": "*",
     "@acme/tokens": "*",
     "@acme/tsconfig": "*",
     "@babel/core": "7.19.1",

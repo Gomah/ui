@@ -2,11 +2,20 @@ import { ExclamationCircleIcon } from '@heroicons/react/20/solid';
 import clsx from 'clsx';
 import * as React from 'react';
 
+const styles = /*tw*/ {
+  size: {
+    sm: 'text-sm',
+    md: 'text-base',
+  },
+};
+
 export interface FieldProps extends React.ComponentPropsWithRef<'div'> {
   label: string;
   htmlFor: string;
   message?: string;
   variant?: 'primary' | 'error';
+
+  size?: 'sm' | 'md';
 
   /**
    * Trailing icon
@@ -24,16 +33,17 @@ const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
       htmlFor,
       children,
       message,
+      size = 'md',
       trailingIcon,
       ...props
     },
     ref
   ) => {
-    const fieldClass = clsx([]);
-    const labelClass = clsx(['block  font-medium text-slate-700']);
-    const inputWrapperClass = clsx('relative mt-1');
+    const fieldClass = clsx(styles.size[size]);
+    const labelClass = clsx(['block  font-medium text-gray-700']);
+    const inputWrapperClass = clsx('relative mt-1.5');
 
-    const messageClass = clsx(['mt-2 text-sm text-slate-500']);
+    const messageClass = clsx(['mt-2 text-sm text-gray-500']);
 
     return (
       <div>

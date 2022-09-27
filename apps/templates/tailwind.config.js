@@ -1,29 +1,17 @@
 /** @type {import('tailwindcss').Config} */
 
-const tokens = require('@acme/tokens');
+const defaultTheme = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-    "../../packages/react/**/*.{js,ts,jsx,tsx}"
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
+    '../../packages/react/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {
-      ringWidth: {
-        '1.5': '1.5px',
-      },
-      colors: {
-        ...tokens.colors,
-      },
-      boxShadow: {
-        ...tokens.shadows,
-      }
+    fontFamily: {
+      sans: ['Inter var', ...defaultTheme.fontFamily.sans],
     },
   },
-  plugins: [
-    require('@tailwindcss/forms'),
-    require('@tailwindcss/typography'),
-    require('@tailwindcss/aspect-ratio'),
-  ],
-}
+  presets: [require('@acme/tailwind-preset')()],
+};

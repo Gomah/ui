@@ -8451,6 +8451,7 @@ __metadata:
   dependencies:
     "@acme/eslint-config-custom": "*"
     "@acme/react": "*"
+    "@acme/tailwind-preset": "*"
     "@acme/tokens": "*"
     "@acme/tsconfig": "*"
     "@babel/core": 7.19.1
