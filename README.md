@@ -8,7 +8,7 @@ Just a play around with components, tired to create these little pieces all the 
 
 ### Existential questions
 
-- How do we define multiple variants combination? Is it a limitation of  Currently a bit weird in `Button.tsx`... Is tailwind the right tool?
+- How do we define multiple variants combination? It currently feels like a limitation and doesn't feel super right, a bit weird to declare variants theme based in `Button.tsx` or `Badge.tex`... Is tailwind the right tool?
 - Use tailwindcss or Vanilla extract?
 - Use radix? If yes, with tailwindcss or Vanilla extract?
 - Use twmerge (if using tailwindcss ?)
