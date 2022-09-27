@@ -42,7 +42,7 @@ __metadata:
     autoprefixer: 10.4.12
     clsx: 1.2.1
     eslint: 8.24.0
-    framer-motion: 7.3.6
+    framer-motion: 7.4.0
     jsdom: 20.0.0
     postcss: 8.4.16
     prettier-plugin-tailwindcss: 0.1.13
@@ -2567,10 +2567,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:18.7.21":
+"@types/node@npm:*":
   version: 18.7.21
   resolution: "@types/node@npm:18.7.21"
   checksum: 9e0558dd44766fb3b1b26815e9877849d8f1188115e0d2bee540cee2c5a11f90e4c00ee059edae8ea018e7f66217e4bf53271536c9a6fd05e33f713b8daa4c66
+  languageName: node
+  linkType: hard
+
+"@types/node@npm:18.7.23":
+  version: 18.7.23
+  resolution: "@types/node@npm:18.7.23"
+  checksum: 2c8df0830d8345e5cd1ca17feb9cf43fa667aae749888e0a068c5c1b35eaedd2f9b24ed987a0758078395edf7a03681e5e0b7790a518ff7afe1ff6d8459f7b4a
   languageName: node
   linkType: hard
 
@@ -4067,9 +4074,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"docs@workspace:apps/docs":
+"docs@workspace:apps/templates":
   version: 0.0.0-use.local
-  resolution: "docs@workspace:apps/docs"
+  resolution: "docs@workspace:apps/templates"
   dependencies:
     "@acme/eslint-config-custom": "*"
     "@acme/react": "*"
@@ -4077,7 +4084,7 @@ __metadata:
     "@acme/tsconfig": "*"
     "@babel/core": 7.19.1
     "@heroicons/react": 2.0.11
-    "@types/node": 18.7.21
+    "@types/node": 18.7.23
     "@types/react": 18.0.21
     autoprefixer: 10.4.12
     eslint: 8.24.0
@@ -5066,9 +5073,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:7.3.6":
-  version: 7.3.6
-  resolution: "framer-motion@npm:7.3.6"
+"framer-motion@npm:7.4.0":
+  version: 7.4.0
+  resolution: "framer-motion@npm:7.4.0"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     "@motionone/dom": 10.13.1
@@ -5083,7 +5090,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 05d25701a95347db010e743398a01803f53c2b3fc5cb178b162a6c54271f9a02a6c6f674ac4b72710a5f2230afc0ce135c37daf40d5b3cc1de289c02317bf031
+  checksum: 96973d93f8bc3c3e9611ebda2568d0cfae2b36bf7b3c8002e55b29a2e971223b3b0ee0a1c630b8d88652317813f2222a7cba366a83500750eafdffecac364e0b
   languageName: node
   linkType: hard
 
