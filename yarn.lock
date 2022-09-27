@@ -4074,30 +4074,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"docs@workspace:apps/templates":
-  version: 0.0.0-use.local
-  resolution: "docs@workspace:apps/templates"
-  dependencies:
-    "@acme/eslint-config-custom": "*"
-    "@acme/react": "*"
-    "@acme/tokens": "*"
-    "@acme/tsconfig": "*"
-    "@babel/core": 7.19.1
-    "@heroicons/react": 2.0.11
-    "@types/node": 18.7.23
-    "@types/react": 18.0.21
-    autoprefixer: 10.4.12
-    eslint: 8.24.0
-    next: 12.3.1
-    next-transpile-modules: 9.0.0
-    postcss: 8.4.16
-    react: 18.2.0
-    react-dom: 18.2.0
-    tailwindcss: 3.1.8
-    typescript: 4.8.3
-  languageName: unknown
-  linkType: soft
-
 "doctrine@npm:^2.1.0":
   version: 2.1.0
   resolution: "doctrine@npm:2.1.0"
@@ -8468,6 +8444,30 @@ __metadata:
   checksum: a04c07bb9e2d8f46776517d4618f2406fb977a74d914ad98b264fc3db0fe8224da5bec11e5f8902c5b9bcb8ace22d95fbe3c7b36b8593b7dfc8391a25898f32f
   languageName: node
   linkType: hard
+
+"templates@workspace:apps/templates":
+  version: 0.0.0-use.local
+  resolution: "templates@workspace:apps/templates"
+  dependencies:
+    "@acme/eslint-config-custom": "*"
+    "@acme/react": "*"
+    "@acme/tokens": "*"
+    "@acme/tsconfig": "*"
+    "@babel/core": 7.19.1
+    "@heroicons/react": 2.0.11
+    "@types/node": 18.7.23
+    "@types/react": 18.0.21
+    autoprefixer: 10.4.12
+    eslint: 8.24.0
+    next: 12.3.1
+    next-transpile-modules: 9.0.0
+    postcss: 8.4.16
+    react: 18.2.0
+    react-dom: 18.2.0
+    tailwindcss: 3.1.8
+    typescript: 4.8.3
+  languageName: unknown
+  linkType: soft
 
 "text-extensions@npm:^1.0.0":
   version: 1.9.0
