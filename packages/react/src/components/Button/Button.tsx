@@ -74,7 +74,7 @@ export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildre
   (
     {
       children,
-      className = '',
+      className,
       size = 'md',
       leadingIcon,
       loading,

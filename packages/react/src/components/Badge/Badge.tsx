@@ -74,16 +74,7 @@ export type BadgeVariant = keyof typeof styles.variant;
 
 export const Badge = React.forwardRef<HTMLDivElement, React.PropsWithChildren<BadgeProps>>(
   (
-    {
-      children,
-      className = '',
-      size = 'md',
-      outlined,
-      closable,
-      withDot,
-      variant = 'gray',
-      ...props
-    },
+    { children, className, size = 'md', outlined, closable, withDot, variant = 'gray', ...props },
     ref
   ) => {
     const variantTheme = outlined ? 'outlined' : 'default';

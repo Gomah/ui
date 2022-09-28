@@ -37,7 +37,7 @@ export type InputSize = keyof typeof styles.size;
 export type InputVariant = keyof typeof styles.variant;
 
 export const Input = React.forwardRef<HTMLInputElement, React.PropsWithRef<InputProps>>(
-  ({ children, className = '', type = 'text', size = 'md', ...props }, ref) => {
+  ({ children, className, type = 'text', size = 'md', ...props }, ref) => {
     const inputClasses = twMerge(
       clsx(
         styles.size[size],

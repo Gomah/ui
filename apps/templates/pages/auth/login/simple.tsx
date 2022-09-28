@@ -24,7 +24,7 @@ export default function Auth() {
           <div className="flex items-center justify-between">
             <Checkbox required size="sm" id="get-notified" label="Remember me" />
 
-            <NextLink href="/" passHref>
+            <NextLink href="/auth/forgot-password/simple" passHref>
               <Link size="sm" weight="medium">
                 Forgot password
               </Link>
