@@ -1,5 +1,6 @@
 export * from './Badge/Badge';
 export * from './Button/Button';
+export * from './Checkbox/Checkbox';
 export * from './Heading/Heading';
 export * from './Field/Field';
 export * from './Input/Input';
