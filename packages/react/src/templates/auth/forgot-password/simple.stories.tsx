@@ -1,4 +1,3 @@
-import NextLink from 'next/link';
 import type { Story } from '@ladle/react';
 import { Button, Checkbox, Field, Heading, Input, Link, Text } from '../../../components';
 

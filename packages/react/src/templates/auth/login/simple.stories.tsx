@@ -1,4 +1,3 @@
-import NextLink from 'next/link';
 import type { Story } from '@ladle/react';
 import { Button, Checkbox, Field, Heading, Input, Link, Text } from '../../../components';
 
@@ -6,7 +5,7 @@ export default {
   title: 'Templates / Auth / Login',
 };
 
-export const Simple: Story = (props) => {
+export const Simple: Story = () => {
   return (
     <div className="pt-24">
       <div className="mx-auto w-full max-w-sm space-y-10">
@@ -39,7 +38,7 @@ export const Simple: Story = (props) => {
           </Button>
 
           <Text size="sm" className="text-center">
-            Don't have an account?{' '}
+            Don&apos;t have an account?{' '}
             <Link href="/?story=templates--auth--login--simple" weight="medium">
               Sign up
             </Link>
