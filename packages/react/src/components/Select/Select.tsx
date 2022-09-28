@@ -64,8 +64,10 @@ function _select<T>(
           {/* @ts-ignore */}
           <span className="block truncate">
             {!!displayKey
-              ? selectedOption?.[displayKey]
-              : selectedOption?.join(', ') || placeholder}
+              ? // @ts-ignore
+                selectedOption?.[displayKey]
+              : // @ts-ignore
+                selectedOption?.join(', ') || placeholder}
           </span>
           <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
             <ChevronUpDownIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />

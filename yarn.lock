@@ -13,7 +13,7 @@ __metadata:
     eslint-config-next: 12.3.1
     eslint-config-prettier: 8.5.0
     eslint-plugin-react: 7.31.8
-    typescript: 4.8.3
+    typescript: 4.8.4
   languageName: unknown
   linkType: soft
 
@@ -50,7 +50,7 @@ __metadata:
     tailwind-merge: 1.6.0
     tailwindcss: 3.1.8
     tsup: 6.2.3
-    typescript: 4.8.3
+    typescript: 4.8.4
     vitest: 0.23.4
   languageName: unknown
   linkType: soft
@@ -7844,7 +7844,7 @@ __metadata:
     "@commitlint/cli": 17.1.2
     "@commitlint/config-conventional": 17.1.0
     prettier: 2.7.1
-    turbo: 1.5.3
+    turbo: 1.5.4
   languageName: unknown
   linkType: soft
 
@@ -8736,58 +8736,58 @@ __metadata:
   languageName: node
   linkType: hard
 
-"turbo-darwin-64@npm:1.5.3":
-  version: 1.5.3
-  resolution: "turbo-darwin-64@npm:1.5.3"
+"turbo-darwin-64@npm:1.5.4":
+  version: 1.5.4
+  resolution: "turbo-darwin-64@npm:1.5.4"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-darwin-arm64@npm:1.5.3":
-  version: 1.5.3
-  resolution: "turbo-darwin-arm64@npm:1.5.3"
+"turbo-darwin-arm64@npm:1.5.4":
+  version: 1.5.4
+  resolution: "turbo-darwin-arm64@npm:1.5.4"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-linux-64@npm:1.5.3":
-  version: 1.5.3
-  resolution: "turbo-linux-64@npm:1.5.3"
+"turbo-linux-64@npm:1.5.4":
+  version: 1.5.4
+  resolution: "turbo-linux-64@npm:1.5.4"
   conditions: os=linux & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-linux-arm64@npm:1.5.3":
-  version: 1.5.3
-  resolution: "turbo-linux-arm64@npm:1.5.3"
+"turbo-linux-arm64@npm:1.5.4":
+  version: 1.5.4
+  resolution: "turbo-linux-arm64@npm:1.5.4"
   conditions: os=linux & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo-windows-64@npm:1.5.3":
-  version: 1.5.3
-  resolution: "turbo-windows-64@npm:1.5.3"
+"turbo-windows-64@npm:1.5.4":
+  version: 1.5.4
+  resolution: "turbo-windows-64@npm:1.5.4"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"turbo-windows-arm64@npm:1.5.3":
-  version: 1.5.3
-  resolution: "turbo-windows-arm64@npm:1.5.3"
+"turbo-windows-arm64@npm:1.5.4":
+  version: 1.5.4
+  resolution: "turbo-windows-arm64@npm:1.5.4"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"turbo@npm:1.5.3":
-  version: 1.5.3
-  resolution: "turbo@npm:1.5.3"
+"turbo@npm:1.5.4":
+  version: 1.5.4
+  resolution: "turbo@npm:1.5.4"
   dependencies:
-    turbo-darwin-64: 1.5.3
-    turbo-darwin-arm64: 1.5.3
-    turbo-linux-64: 1.5.3
-    turbo-linux-arm64: 1.5.3
-    turbo-windows-64: 1.5.3
-    turbo-windows-arm64: 1.5.3
+    turbo-darwin-64: 1.5.4
+    turbo-darwin-arm64: 1.5.4
+    turbo-linux-64: 1.5.4
+    turbo-linux-arm64: 1.5.4
+    turbo-windows-64: 1.5.4
+    turbo-windows-arm64: 1.5.4
   dependenciesMeta:
     turbo-darwin-64:
       optional: true
@@ -8803,7 +8803,7 @@ __metadata:
       optional: true
   bin:
     turbo: bin/turbo
-  checksum: c79c3b1961c25f92f242ddb6344ca3e405cdb36aa6193ab00ddafa29de3540bffd3ab6d5c0ec5613e038bb5357ed1b0596042ec58372fe4b8373784377f9063c
+  checksum: 37f16e8a3e30c032d3fe250fff4a3c781702b3cd9e634855196a97aca2b4c7d3efeffbbd305affc0a4f677e1dfe3007a7d1953781f31f767f1a2a3ff71cf134d
   languageName: node
   linkType: hard
 
@@ -8877,16 +8877,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.8.3":
-  version: 4.8.3
-  resolution: "typescript@npm:4.8.3"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 8286a5edcaf3d68e65c451aa1e7150ad1cf53ee0813c07ec35b7abdfdb10f355ecaa13c6a226a694ae7a67785fd7eeebf89f845da0b4f7e4a35561ddc459aba0
-  languageName: node
-  linkType: hard
-
 "typescript@npm:4.8.4, typescript@npm:^4.6.4":
   version: 4.8.4
   resolution: "typescript@npm:4.8.4"
@@ -8894,16 +8884,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 3e4f061658e0c8f36c820802fa809e0fd812b85687a9a2f5430bc3d0368e37d1c9605c3ce9b39df9a05af2ece67b1d844f9f6ea8ff42819f13bcb80f85629af0
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@4.8.3#~builtin<compat/typescript>":
-  version: 4.8.3
-  resolution: "typescript@patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 2222d2382fb3146089b1d27ce2b55e9d1f99cc64118f1aba75809b693b856c5d3c324f052f60c75b577947fc538bc1c27bad0eb76cbdba9a63a253489504ba7e
   languageName: node
   linkType: hard
 

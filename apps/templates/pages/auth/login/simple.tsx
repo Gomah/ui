@@ -1,4 +1,4 @@
-import { Button, Link, Heading, Text, Field, Input } from '@acme/react';
+import { Button, Link, Heading, Text, Field, Input, Checkbox } from '@acme/react';
 import NextLink from 'next/link';
 
 export default function Auth() {
@@ -21,6 +21,16 @@ export default function Auth() {
             <Input required placeholder="••••••••" id="password" type="password" />
           </Field>
 
+          <div className="flex items-center justify-between">
+            <Checkbox required size="sm" id="get-notified" label="Remember me" />
+
+            <NextLink href="/" passHref>
+              <Link size="sm" weight="medium">
+                Forgot password
+              </Link>
+            </NextLink>
+          </div>
+
           <Button size="lg" fullWidth>
             Sign in
           </Button>
@@ -28,7 +38,7 @@ export default function Auth() {
           <Text size="sm" className="text-center">
             Don't have an account?{' '}
             <NextLink href="/" passHref>
-              <Link weight="medium">Signup</Link>
+              <Link weight="medium">Sign up</Link>
             </NextLink>
           </Text>
         </form>

@@ -1,6 +1,6 @@
 const defaultTokens = require('@acme/tokens');
 
-module.exports = function AcmeTailwindPreset({ tokens = defaultTokens } = { tokens: defaultTokens}) {
+module.exports = function AcmeTailwindPreset({ tokens = defaultTokens } = { tokens: defaultTokens }) {
   // TODO: Merge tokens with defaultTokens
   return {
     theme: {
