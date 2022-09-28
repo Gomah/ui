@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('eslint-config-custom'),
+  ...require('@acme/eslint-config-custom'),
 };

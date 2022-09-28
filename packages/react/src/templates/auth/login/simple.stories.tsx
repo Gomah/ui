@@ -1,7 +1,12 @@
-import { Button, Link, Heading, Text, Field, Input, Checkbox } from '@acme/react';
 import NextLink from 'next/link';
+import type { Story } from '@ladle/react';
+import { Button, Checkbox, Field, Heading, Input, Link, Text } from '../../../components';
 
-export default function Auth() {
+export default {
+  title: 'Templates / Auth / Login',
+};
+
+export const Simple: Story = (props) => {
   return (
     <div className="pt-24">
       <div className="mx-auto w-full max-w-sm space-y-10">
@@ -24,11 +29,9 @@ export default function Auth() {
           <div className="flex items-center justify-between">
             <Checkbox required size="sm" id="get-notified" label="Remember me" />
 
-            <NextLink href="/auth/forgot-password/simple" passHref>
-              <Link size="sm" weight="medium">
-                Forgot password
-              </Link>
-            </NextLink>
+            <Link href="/?story=templates--auth--forgot-password--simple" size="sm" weight="medium">
+              Forgot password
+            </Link>
           </div>
 
           <Button size="lg" fullWidth>
@@ -37,12 +40,12 @@ export default function Auth() {
 
           <Text size="sm" className="text-center">
             Don't have an account?{' '}
-            <NextLink href="/" passHref>
-              <Link weight="medium">Sign up</Link>
-            </NextLink>
+            <Link href="/?story=templates--auth--login--simple" weight="medium">
+              Sign up
+            </Link>
           </Text>
         </form>
       </div>
     </div>
   );
-}
+};

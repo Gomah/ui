@@ -11,8 +11,6 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
    */
   leadingIcon?: React.ReactNode;
 
-  as?: ReactTag;
-
   /**
    * Trailing icon
    * @usage <Button trailingIcon={<Home className="h-4 w-4" />}>Button</Button>
