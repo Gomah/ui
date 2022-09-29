@@ -8,7 +8,6 @@ export const ButtonGroup = React.forwardRef<
   React.PropsWithChildren<ButtonGroupProps>
 >(({ children, className, ...props }, ref) => {
   const childrenWithProps = React.Children.map(children, (child, index) => {
-    console.log({ index });
     if (React.isValidElement(child)) {
       return React.cloneElement(child, {
         // @ts-ignore

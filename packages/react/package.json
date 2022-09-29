@@ -6,7 +6,9 @@
   "types": "./index.tsx",
   "license": "MIT",
   "scripts": {
-    "dev": "FORCE_COLOR=1 ladle serve",
+    "dev": "concurrently npm:dev:ladle npm:dev:tsup",
+    "dev:ladle": "FORCE_COLOR=1 ladle serve",
+    "dev:tsup": "FORCE_COLOR=1 tsup index.tsx --format esm,cjs --external react --dts --watch",
     "build": "yarn build:components && yarn build:ladle",
     "build:components": "tsup index.tsx --format esm,cjs --external react --dts",
     "build:ladle": "ladle build",
@@ -22,7 +24,7 @@
     "@uiball/loaders": "1.2.6",
     "autoprefixer": "10.4.12",
     "clsx": "1.2.1",
-    "framer-motion": "7.4.0",
+    "framer-motion": "7.5.0",
     "postcss": "8.4.16",
     "tailwind-merge": "1.6.0",
     "tailwindcss": "3.1.8"
@@ -39,6 +41,7 @@
     "@testing-library/user-event": "14.4.3",
     "@types/react": "18.0.21",
     "@types/react-dom": "18.0.6",
+    "concurrently": "7.4.0",
     "eslint": "8.24.0",
     "jsdom": "20.0.0",
     "prettier-plugin-tailwindcss": "0.1.13",
