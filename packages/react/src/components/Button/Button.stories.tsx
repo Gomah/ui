@@ -1,6 +1,7 @@
 import { action } from '@ladle/react';
 import { Button, ButtonProps, ButtonSize, ButtonVariant } from './Button';
 import type { Story } from '@ladle/react';
+import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
 
 export const Examples: Story<ButtonProps> = (props) => {
   return (
@@ -10,6 +11,15 @@ export const Examples: Story<ButtonProps> = (props) => {
           <Button {...props} onClick={action('onClick')}>
             Button
           </Button>
+        </div>
+        <div className="space-x-4">
+          <ButtonGroup>
+            <Button>One</Button>
+            <Button>Two</Button>
+            <Button>Three</Button>
+            <Button>Four</Button>
+            <Button>Five</Button>
+          </ButtonGroup>
         </div>
       </div>
     </div>

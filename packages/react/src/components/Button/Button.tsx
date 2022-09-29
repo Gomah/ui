@@ -53,6 +53,7 @@ const styles = /*tw*/ {
     '2xl': 'py-4 px-7 text-lg',
   },
 
+  // ? How do I breakdown variants, e.g: primary with state (hover, disabled, focus) with themes? e.g: Primary Light, Error Light
   variant: {
     primary:
       'bg-primary-600 text-white hover:bg-primary-700 disabled:bg-primary-200 disabled:border-primary-200 focus-visible:ring-primary-100 border-primary-600 hover:border-primary-700',
