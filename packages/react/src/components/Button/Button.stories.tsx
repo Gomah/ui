@@ -17,6 +17,7 @@ export const Examples: Story<ButtonProps> = (props) => {
 };
 
 Examples.args = {
+  disabled: false,
   rounded: false,
   loading: false,
   fullWidth: false,
@@ -30,7 +31,7 @@ Examples.argTypes = {
     control: { type: 'select' },
   },
   variant: {
-    options: ['primary', 'secondary', 'error', 'warning'] as ButtonVariant[],
+    options: ['primary', 'white', 'secondary', 'success', 'error', 'warning'] as ButtonVariant[],
     control: { type: 'select' },
   },
 };

@@ -25,6 +25,7 @@
     },
 
     "dev": {
+      "dependsOn": ["@acme/tokens#build", "@acme/tailwind-preset#build"],
       "cache": false
     },
 
