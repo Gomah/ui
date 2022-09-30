@@ -9,7 +9,7 @@ export const Examples: Story<InputProps> = (props) => {
       <div className="space-y-4">
         <div className="space-x-4">
           <Field label="Email" htmlFor="email">
-            <Input id="email" placeholder="hello@distributed.sh" />
+            <Input {...props} id="email" placeholder="hello@distributed.sh" />
           </Field>
         </div>
       </div>
@@ -19,7 +19,7 @@ export const Examples: Story<InputProps> = (props) => {
 
 Examples.args = {
   size: 'md',
-  variant: 'gray',
+  variant: 'primary',
 };
 
 Examples.argTypes = {
@@ -28,7 +28,7 @@ Examples.argTypes = {
     control: { type: 'select' },
   },
   variant: {
-    options: ['primary', 'gray'] as InputVariant[],
+    options: ['primary', 'gray', 'error'] as InputVariant[],
     control: { type: 'select' },
   },
 };

@@ -4,6 +4,8 @@ import { twMerge } from 'tailwind-merge';
 
 export interface InputProps extends Omit<React.ComponentPropsWithRef<'input'>, 'size'> {
   size?: 'sm' | 'md';
+
+  variant?: InputVariant;
 }
 
 const styles = /*tw*/ {
@@ -14,19 +16,13 @@ const styles = /*tw*/ {
 
   variant: {
     gray: {
-      default: 'border-gray-300 placeholder-gray-500 focus:border-gray-500 focus:ring-gray-500',
+      default: 'border-gray-300 focus:border-gray-300 focus:ring-gray-100',
     },
     primary: {
-      default: 'border-gray-300 focus:border-primary-600 focus:ring-primary-600',
+      default: 'border-gray-300 focus:border-primary-300 focus:ring-primary-100',
     },
     error: {
-      default: 'border-error-50 text-error-700',
-    },
-    warning: {
-      default: 'border-warning-50 text-warning-700',
-    },
-    success: {
-      default: 'border-success-50 text-success-700',
+      default: 'border-error-300 focus:border-error-300 focus:ring-error-100',
     },
   },
 
@@ -37,18 +33,20 @@ export type InputSize = keyof typeof styles.size;
 export type InputVariant = keyof typeof styles.variant;
 
 export const Input = React.forwardRef<HTMLInputElement, React.PropsWithRef<InputProps>>(
-  ({ children, className, type = 'text', size = 'md', ...props }, ref) => {
+  ({ children, className, variant = 'gray', type = 'text', size = 'md', ...props }, ref) => {
     const inputClasses = twMerge(
+      'text-gray-900 placeholder-gray-500',
       clsx(
+        'focus:ring-4',
         styles.size[size],
-        styles.variant.primary.default,
+        styles.variant[variant].default,
         styles.shadow,
         'block rounded-md w-full'
       ),
       className
     );
 
-    return <input type={type} ref={ref} {...props} className={inputClasses} />;
+    return <input ref={ref} type={type} {...props} className={inputClasses} />;
   }
 );
 
