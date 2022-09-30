@@ -6,13 +6,11 @@ import { twMerge } from 'tailwind-merge';
 export interface BadgeProps extends React.ComponentPropsWithRef<'div'> {
   /**
    * Defines size of the badge
-   * @usage <Badge size="sm">Label</Badge>
    */
   size?: BadgeSize;
 
   /**
    * Defines variant of the badge
-   * @usage <Badge variant="primary">Label</Badge>
    */
   variant?: BadgeVariant;
 
@@ -29,8 +27,17 @@ export interface BadgeProps extends React.ComponentPropsWithRef<'div'> {
   /**
    * With leading dot
    */
-
   withDot?: boolean;
+
+  /**
+   * Leading Icon
+   */
+  leadingIcon?: React.ReactNode;
+
+  /**
+   * Trailing Icon
+   */
+  trailingIcon?: React.ReactNode;
 }
 
 const styles = /*tw*/ {
@@ -45,26 +52,31 @@ const styles = /*tw*/ {
       default: 'bg-gray-100 text-gray-700',
       outlined: 'ring-gray-600 text-gray-700',
       closable: 'hover:bg-gray-200',
+      dot: 'text-gray-500',
     },
     primary: {
       default: 'bg-primary-50 text-primary-700',
       outlined: 'ring-primary-600 text-primary-700',
       closable: 'hover:bg-primary-200',
+      dot: 'text-primary-500',
     },
     error: {
       default: 'bg-error-50 text-error-700',
       outlined: 'ring-error-600 text-error-700',
       closable: 'hover:bg-error-200',
+      dot: 'text-error-500',
     },
     warning: {
       default: 'bg-warning-50 text-warning-700',
       outlined: 'ring-warning-600 text-warning-700',
       closable: 'hover:bg-warning-200',
+      dot: 'text-warning-500',
     },
     success: {
       default: 'bg-success-50 text-success-700',
       outlined: 'ring-success-600 text-success-700',
       closable: 'hover:bg-success-200',
+      dot: 'text-success-500',
     },
   },
 };
@@ -74,7 +86,18 @@ export type BadgeVariant = keyof typeof styles.variant;
 
 export const Badge = React.forwardRef<HTMLDivElement, React.PropsWithChildren<BadgeProps>>(
   (
-    { children, className, size = 'md', outlined, closable, withDot, variant = 'gray', ...props },
+    {
+      children,
+      className,
+      size = 'md',
+      outlined,
+      closable,
+      leadingIcon,
+      trailingIcon,
+      withDot,
+      variant = 'gray',
+      ...props
+    },
     ref
   ) => {
     const variantTheme = outlined ? 'outlined' : 'default';
@@ -82,7 +105,8 @@ export const Badge = React.forwardRef<HTMLDivElement, React.PropsWithChildren<Ba
       clsx(
         'inline-flex rounded-2xl font-medium',
         outlined && 'ring-inset ring-1.5',
-        (closable || withDot) && 'items-center',
+        (closable || withDot || trailingIcon || leadingIcon) && 'items-center',
+        (trailingIcon || leadingIcon) && 'space-x-1',
         styles.variant[variant][variantTheme], // Apply variant style & theme
         styles.size[size] // Apply size style
       ),
@@ -93,7 +117,7 @@ export const Badge = React.forwardRef<HTMLDivElement, React.PropsWithChildren<Ba
       <div ref={ref} {...props} className={badgeClasses}>
         {withDot && (
           <svg
-            className="mr-1 h-2 w-2"
+            className={clsx('mr-1.5 h-2 w-2', styles.variant[variant].dot)}
             viewBox="0 0 8 8"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +125,10 @@ export const Badge = React.forwardRef<HTMLDivElement, React.PropsWithChildren<Ba
             <circle cx="4" cy="4" r="3" fill="currentColor" />
           </svg>
         )}
-        {children}
+
+        {leadingIcon}
+        <span>{children}</span>
+        {trailingIcon}
         {closable && (
           <button
             type="button"

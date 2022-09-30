@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "sideEffects": false,
   "main": "./index.tsx",
+  "module": "./index.tsx",
   "types": "./index.tsx",
   "license": "MIT",
   "scripts": {

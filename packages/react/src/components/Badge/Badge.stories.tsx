@@ -6,9 +6,7 @@ export const Examples: Story<BadgeProps> = (props) => {
     <div className="max-w-fit space-y-8">
       <div className="space-y-4">
         <div className="space-x-4">
-          <Badge {...props} style={{ boxSizing: 'border-box' }}>
-            Label
-          </Badge>
+          <Badge {...props}>Label</Badge>
         </div>
       </div>
     </div>
@@ -20,7 +18,7 @@ Examples.args = {
   variant: 'gray',
   outlined: false,
   closable: false,
-  withDot: true,
+  withDot: false,
 };
 
 Examples.argTypes = {
