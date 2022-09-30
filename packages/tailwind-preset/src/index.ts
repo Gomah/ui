@@ -5,9 +5,6 @@ module.exports = function AcmeTailwindPreset({ tokens = defaultTokens } = { toke
   return {
     theme: {
       extend: {
-        ringWidth: {
-          '1.5': '1.5px',
-        },
         colors: {
           ...tokens.colors,
         },

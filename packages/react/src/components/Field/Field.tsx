@@ -44,7 +44,20 @@ const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
     const labelClass = clsx(['block  font-medium text-gray-700']);
     const inputWrapperClass = clsx('relative mt-1.5');
 
-    const messageClass = clsx(['mt-2 text-sm text-gray-500']);
+    const childrenWithProps = React.Children.map(children, (child, index) => {
+      if (React.isValidElement(child)) {
+        return React.cloneElement(child, {
+          // @ts-ignore
+          variant,
+        });
+      }
+      return child;
+    });
+
+    const messageClass = clsx(
+      'mt-2 text-sm',
+      variant === 'error' ? 'text-error-500' : 'text-gray-500'
+    );
 
     return (
       <div>
@@ -52,15 +65,16 @@ const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
           <label htmlFor={htmlFor} className={labelClass}>
             {label}
           </label>
-          <div className={inputWrapperClass}>{children}</div>
-          {!!trailingIcon ||
-            (variant === 'error' && (
+          <div className={inputWrapperClass}>
+            {childrenWithProps}
+            {variant === 'error' && (
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
                 {trailingIcon || (
-                  <ExclamationCircleIcon className="h-5 w-5 text-red-600" aria-hidden="true" />
+                  <ExclamationCircleIcon className="h-5 w-5 text-error-600" aria-hidden="true" />
                 )}
               </div>
-            ))}
+            )}
+          </div>
         </div>
         {message ? <p className={messageClass}>{message}</p> : ''}
       </div>
