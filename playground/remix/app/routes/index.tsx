@@ -5,7 +5,7 @@ export default function Index() {
     <div className="pt-24">
       <div className="mx-auto w-full max-w-lg space-y-10">
         <Button size="2xl" fullWidth>
-          I'm a large button and I work on Remix.run
+          I&apos;m a large button and I work on Remix.run
         </Button>
       </div>
     </div>
