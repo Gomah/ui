@@ -70,6 +70,16 @@ const styles = /*tw*/ {
   },
 
   shadow: 'shadow-xs',
+
+  rounded: {
+    full: 'rounded-full',
+    default: 'rounded-lg',
+  },
+
+  focus: 'focus-visible:outline-none focus-visible:ring-4',
+  border: 'border',
+  fontWeight: 'font-medium',
+  transition: 'transition-colors',
 };
 
 export type ButtonSize = keyof typeof styles.size;
@@ -93,15 +103,16 @@ export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildre
   ) => {
     const buttonClasses = twMerge(
       clsx(
-        styles.variant[variant], // Apply variant style
-        styles.size[size], // Apply size style
-        rounded ? 'rounded-full' : 'rounded-lg',
+        styles.variant[variant],
+        styles.size[size],
+        rounded ? styles.rounded.full : styles.rounded.default,
         !!leadingIcon || !!trailingIcon ? 'inline-flex items-center space-x-2' : '',
-        styles.shadow, // Apply shadow
-        fullWidth && 'w-full',
-        'border',
-        'focus-visible:outline-none focus-visible:ring-4',
-        'font-medium transition-colors'
+        styles.shadow,
+        styles.focus,
+        styles.border,
+        styles.fontWeight,
+        styles.transition,
+        fullWidth && 'w-full'
       ),
       className
     );
