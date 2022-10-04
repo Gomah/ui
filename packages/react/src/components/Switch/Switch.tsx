@@ -3,38 +3,91 @@ import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
 import { Switch as HeadlessSwitch } from '@headlessui/react';
 
-export interface SwitchProps extends Omit<React.ComponentPropsWithRef<'button'>, 'onChange'> {
+const styles = /*tw*/ {
+  size: {
+    sm: {
+      container: 'h-5 w-10',
+      dot: 'h-5 w-5',
+      translate: {
+        active: 'translate-x-5',
+        default: 'translate-x-0',
+      },
+    },
+    md: {
+      container: 'h-6 w-11',
+      dot: 'h-4 w-4',
+      translate: {
+        active: 'translate-x-6',
+        default: 'translate-x-1',
+      },
+    },
+  },
+  variant: {
+    primary: 'bg-primary-600',
+    dark: 'bg-gray-900',
+    warning: 'bg-warning-600',
+    error: 'bg-error-600',
+    success: 'bg-success-600',
+  },
+};
+
+export type SwitchSize = keyof typeof styles.size;
+export type SwitchVariant = keyof typeof styles.variant;
+
+export interface SwitchProps
+  extends Omit<React.ComponentPropsWithRef<'button'>, 'onChange' | 'checked'> {
   checked: boolean;
   onChange(checked: boolean): void;
+  screenReaderMessage?: string;
+
+  /**
+   * Defines the size of the switch
+   */
+  size?: SwitchSize;
+
+  /**
+   * Defines variant of the switch
+   */
+  variant?: SwitchVariant;
 }
 
-// export type SwitchProps = {
-//   checked: boolean;
-//   onChange?(checked: boolean): void;
-// } & Omit<React.ComponentPropsWithRef<'button'>, 'onChange'>;
-
 export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
-  ({ children, checked, onChange, className, ...props }, ref) => {
+  (
+    {
+      children,
+      checked,
+      variant = 'primary',
+      size = 'md',
+      onChange,
+      className,
+      screenReaderMessage,
+      ...props
+    },
+    ref
+  ) => {
     return (
       // @ts-ignore
       <HeadlessSwitch
         ref={ref}
-        {...props}
         checked={checked}
         onChange={onChange}
+        {...props}
         className={twMerge(
           clsx(
-            checked ? 'bg-primary-600' : 'bg-gray-200',
-            'relative inline-flex h-6 w-11 items-center rounded-full'
+            checked ? styles.variant[variant] : 'bg-gray-200',
+            styles.size[size].container,
+            'relative inline-flex items-center rounded-full'
           ),
           className
         )}
       >
-        <span className="sr-only">Enable notifications</span>
+        {screenReaderMessage && <span className="sr-only">{screenReaderMessage}</span>}
         <span
-          className={`${
-            checked ? 'translate-x-6' : 'translate-x-1'
-          } inline-block h-4 w-4 transform rounded-full bg-white transition`}
+          className={clsx(
+            checked ? styles.size[size].translate.active : styles.size[size].translate.default,
+            styles.size[size].dot,
+            'inline-block transform rounded-full bg-white shadow transition '
+          )}
         />
       </HeadlessSwitch>
     );
