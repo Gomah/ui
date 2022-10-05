@@ -43,7 +43,7 @@ __metadata:
     clsx: 1.2.1
     concurrently: 7.4.0
     eslint: 8.24.0
-    framer-motion: 7.5.1
+    framer-motion: 7.5.2
     jsdom: 20.0.1
     postcss: 8.4.17
     prettier-plugin-tailwindcss: 0.1.13
@@ -3122,17 +3122,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*":
-  version: 18.8.0
-  resolution: "@types/node@npm:18.8.0"
-  checksum: 3433cbc22e90fafb047f93b3ef05ba01a07f780a24ff1af393f435f807537b533fe9e8a816586825f4c5fd5336c3e80225571f44ec3b6479c463408c072773e7
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:18.8.1":
-  version: 18.8.1
-  resolution: "@types/node@npm:18.8.1"
-  checksum: 6168dbdc42cbedff20fd16ed7c775038d6de52fe1458a9a3be07e39805c75d107f185908a8cdfe0b271f8f391a0c99fde27859975cf6b5a8fee385b3f5cfb42a
+"@types/node@npm:*, @types/node@npm:18.8.2":
+  version: 18.8.2
+  resolution: "@types/node@npm:18.8.2"
+  checksum: b7c74dea0e835fb7faf69b4a2e87d43c1d228d88adacdff464d9e92d18a0b43bec6147b9eb3287650ac75fe5af730c53391869d02175e6b032dcb99ae2f54c92
   languageName: node
   linkType: hard
 
@@ -7223,9 +7216,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:7.5.1":
-  version: 7.5.1
-  resolution: "framer-motion@npm:7.5.1"
+"framer-motion@npm:7.5.2":
+  version: 7.5.2
+  resolution: "framer-motion@npm:7.5.2"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     "@motionone/dom": 10.13.1
@@ -7240,7 +7233,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 7785459f34b09b9c0d6534b39f7a0f5ba5748d061a0d9c5ba68fa1bc5a3e0873205f628347218873948be187b8c4e6f037837a35e73d642ea18c509253dcda02
+  checksum: 8c7f664e758ee351270dcce373a7d5a55230d6cd45abf57df95ee6641f6130b1a38c106949443053ba7724d0216b654a708da6feb88f5486aca8ed0fbf826f7e
   languageName: node
   linkType: hard
 
@@ -10175,7 +10168,7 @@ __metadata:
     "@acme/tokens": "*"
     "@acme/tsconfig": "*"
     "@heroicons/react": 2.0.11
-    "@types/node": 18.8.1
+    "@types/node": 18.8.2
     "@types/react": 18.0.21
     autoprefixer: 10.4.12
     eslint: 8.24.0
