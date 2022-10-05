@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@headlessui/react": "1.7.3",
-    "@heroicons/react": "2.0.11",
+    "@heroicons/react": "2.0.12",
     "@ladle/react": "2.4.3",
     "@tailwindcss/aspect-ratio": "0.4.2",
     "@tailwindcss/forms": "0.5.3",
