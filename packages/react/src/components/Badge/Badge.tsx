@@ -10,9 +10,9 @@ export interface BadgeProps extends React.ComponentPropsWithRef<'div'> {
   size?: BadgeSize;
 
   /**
-   * Defines variant of the badge
+   * Defines colour of the badge
    */
-  variant?: BadgeVariant;
+  colour?: BadgeColour;
 
   /**
    * Outlined
@@ -47,7 +47,7 @@ const styles = /*tw*/ {
     lg: 'py-1 px-3 text-base',
   },
 
-  variant: {
+  colour: {
     gray: {
       default: 'bg-gray-100 text-gray-700',
       outlined: 'ring-gray-600 text-gray-700',
@@ -82,7 +82,7 @@ const styles = /*tw*/ {
 };
 
 export type BadgeSize = keyof typeof styles.size;
-export type BadgeVariant = keyof typeof styles.variant;
+export type BadgeColour = keyof typeof styles.colour;
 
 export const Badge = React.forwardRef<HTMLDivElement, React.PropsWithChildren<BadgeProps>>(
   (
@@ -95,20 +95,20 @@ export const Badge = React.forwardRef<HTMLDivElement, React.PropsWithChildren<Ba
       leadingIcon,
       trailingIcon,
       withDot,
-      variant = 'gray',
+      colour = 'gray',
       ...props
     },
     ref
   ) => {
-    const variantTheme = outlined ? 'outlined' : 'default';
+    const variant = outlined ? 'outlined' : 'default';
     const badgeClasses = twMerge(
       clsx(
         'inline-flex rounded-2xl font-medium',
         outlined && 'ring-inset ring-1.5',
         (closable || withDot || trailingIcon || leadingIcon) && 'items-center',
         (trailingIcon || leadingIcon) && 'space-x-1',
-        styles.variant[variant][variantTheme], // Apply variant style & theme
-        styles.size[size] // Apply size style
+        styles.colour[colour][variant],
+        styles.size[size]
       ),
       className
     );
@@ -117,7 +117,7 @@ export const Badge = React.forwardRef<HTMLDivElement, React.PropsWithChildren<Ba
       <div ref={ref} {...props} className={badgeClasses}>
         {withDot && (
           <svg
-            className={clsx('mr-1.5 h-2 w-2', styles.variant[variant].dot)}
+            className={clsx('mr-1.5 h-2 w-2', styles.colour[colour].dot)}
             viewBox="0 0 8 8"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -132,7 +132,7 @@ export const Badge = React.forwardRef<HTMLDivElement, React.PropsWithChildren<Ba
         {closable && (
           <button
             type="button"
-            className={clsx('ml-1 rounded-full', styles.variant[variant].closable)}
+            className={clsx('ml-1 rounded-full', styles.colour[colour].closable)}
           >
             <XMarkIcon className="h-4 w-4" />
           </button>

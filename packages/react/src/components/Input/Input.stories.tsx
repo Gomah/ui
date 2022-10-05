@@ -1,5 +1,5 @@
 import { action } from '@ladle/react';
-import { Input, InputProps, InputSize, InputVariant } from './Input';
+import { Input, InputProps, InputSize, InputColour } from './Input';
 import type { Story } from '@ladle/react';
 import { Field } from '../Field/Field';
 
@@ -19,7 +19,7 @@ export const Examples: Story<InputProps> = (props) => {
 
 Examples.args = {
   size: 'md',
-  variant: 'primary',
+  colour: 'primary',
 };
 
 Examples.argTypes = {
@@ -27,8 +27,8 @@ Examples.argTypes = {
     options: ['md', 'sm'] as InputSize[],
     control: { type: 'select' },
   },
-  variant: {
-    options: ['primary', 'gray', 'error'] as InputVariant[],
+  colour: {
+    options: ['primary', 'gray', 'error'] as InputColour[],
     control: { type: 'select' },
   },
 };

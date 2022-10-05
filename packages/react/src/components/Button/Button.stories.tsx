@@ -1,5 +1,5 @@
 import { action } from '@ladle/react';
-import { Button, ButtonProps, ButtonSize, ButtonVariant } from './Button';
+import { Button, ButtonProps, ButtonSize, ButtonColour } from './Button';
 import type { Story } from '@ladle/react';
 import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
 
@@ -32,7 +32,7 @@ Examples.args = {
   loading: false,
   fullWidth: false,
   size: 'md',
-  variant: 'primary',
+  colour: 'primary',
 };
 
 Examples.argTypes = {
@@ -40,8 +40,8 @@ Examples.argTypes = {
     options: ['md', 'sm', 'lg', 'xl', '2xl'] as ButtonSize[],
     control: { type: 'select' },
   },
-  variant: {
-    options: ['primary', 'white', 'secondary', 'success', 'error', 'warning'] as ButtonVariant[],
+  colour: {
+    options: ['primary', 'white', 'secondary', 'success', 'error', 'warning'] as ButtonColour[],
     control: { type: 'select' },
   },
 };

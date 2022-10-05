@@ -9,32 +9,32 @@ const styles = /*tw*/ {
     lg: 'h-6 w-6',
   },
 
-  variant: {
+  colour: {
     primary:
       'border-gray-300 hover:bg-primary-100 hover:border-primary-600 text-primary-600 focus:ring-primary-100 focus:border-primary-300',
   },
 };
 
 type CheckboxSize = keyof typeof styles.size;
-type CheckboxVariant = keyof typeof styles.variant;
+type CheckboxColour = keyof typeof styles.colour;
 
 export interface CheckboxProps extends Omit<React.ComponentPropsWithRef<'input'>, 'size'> {
   size?: CheckboxSize;
 
-  variant?: CheckboxVariant;
+  colour?: CheckboxColour;
 
   label?: string;
 }
 
 const Checkbox = React.forwardRef<HTMLInputElement, React.PropsWithRef<CheckboxProps>>(
-  ({ className, size = 'md', label, variant = 'primary', ...props }, ref) => {
+  ({ className, size = 'md', label, colour = 'primary', ...props }, ref) => {
     const checkboxClasses = twMerge(
       clsx(
         // Note, @tailwindcss/forms adds a focus:ring-offset-2, we want 0
         'rounded focus:ring-offset-0 transition-colors',
         'focus-visible:ring-4 focus:ring-0',
         styles.size[size],
-        styles.variant[variant]
+        styles.colour[colour]
       ),
       className
     );

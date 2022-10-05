@@ -22,7 +22,7 @@ const styles = /*tw*/ {
       },
     },
   },
-  variant: {
+  colour: {
     primary: 'bg-primary-600',
     dark: 'bg-gray-900',
     warning: 'bg-warning-600',
@@ -32,7 +32,7 @@ const styles = /*tw*/ {
 };
 
 export type SwitchSize = keyof typeof styles.size;
-export type SwitchVariant = keyof typeof styles.variant;
+export type SwitchColour = keyof typeof styles.colour;
 
 export interface SwitchProps
   extends Omit<React.ComponentPropsWithRef<'button'>, 'onChange' | 'checked'> {
@@ -46,9 +46,9 @@ export interface SwitchProps
   size?: SwitchSize;
 
   /**
-   * Defines variant of the switch
+   * Defines colour of the switch
    */
-  variant?: SwitchVariant;
+  colour?: SwitchColour;
 }
 
 export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
@@ -56,7 +56,7 @@ export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
     {
       children,
       checked,
-      variant = 'primary',
+      colour = 'primary',
       size = 'md',
       onChange,
       className,
@@ -74,7 +74,7 @@ export const Switch = React.forwardRef<HTMLButtonElement, SwitchProps>(
         {...props}
         className={twMerge(
           clsx(
-            checked ? styles.variant[variant] : 'bg-gray-200',
+            checked ? styles.colour[colour] : 'bg-gray-200',
             styles.size[size].container,
             'relative inline-flex items-center rounded-full'
           ),

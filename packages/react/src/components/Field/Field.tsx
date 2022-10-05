@@ -14,7 +14,7 @@ export interface FieldProps extends React.ComponentPropsWithRef<'div'> {
   label: string;
   htmlFor: string;
   message?: string;
-  variant?: 'primary' | 'error';
+  colour?: 'primary' | 'error';
 
   size?: 'sm' | 'md';
 
@@ -28,7 +28,7 @@ export interface FieldProps extends React.ComponentPropsWithRef<'div'> {
 const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
   (
     {
-      variant = 'primary',
+      colour = 'primary',
       className,
       label,
       htmlFor,
@@ -48,7 +48,7 @@ const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
       if (React.isValidElement(child)) {
         return React.cloneElement(child, {
           // @ts-ignore
-          variant,
+          colour,
         });
       }
       return child;
@@ -56,7 +56,7 @@ const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
 
     const messageClass = clsx(
       'mt-2 text-sm',
-      variant === 'error' ? 'text-error-500' : 'text-gray-500'
+      colour === 'error' ? 'text-error-500' : 'text-gray-500'
     );
 
     return (
@@ -67,7 +67,7 @@ const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
           </label>
           <div className={inputWrapperClass}>
             {childrenWithProps}
-            {variant === 'error' && (
+            {colour === 'error' && (
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
                 {trailingIcon || (
                   <ExclamationCircleIcon className="h-5 w-5 text-error-600" aria-hidden="true" />

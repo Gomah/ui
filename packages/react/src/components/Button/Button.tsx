@@ -23,10 +23,10 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
   size?: ButtonSize;
 
   /**
-   * Defines variant of the button
-   * @usage <Button variant="primary">Button</Button>
+   * Defines colour of the button
+   * @usage <Button colour="primary">Button</Button>
    */
-  variant?: ButtonVariant;
+  colour?: ButtonColour;
 
   /**
    * Rounded button
@@ -54,7 +54,7 @@ const styles = /*tw*/ {
   },
 
   // ? How do I breakdown variants, e.g: primary with state (hover, disabled, focus) with themes? e.g: Primary Light, Error Light
-  variant: {
+  colour: {
     primary:
       'bg-primary-600 text-white hover:bg-primary-700 disabled:bg-primary-200 disabled:border-primary-200 focus-visible:ring-primary-100 border-primary-600 hover:border-primary-700',
     white:
@@ -83,7 +83,7 @@ const styles = /*tw*/ {
 };
 
 export type ButtonSize = keyof typeof styles.size;
-export type ButtonVariant = keyof typeof styles.variant;
+export type ButtonColour = keyof typeof styles.colour;
 
 export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildren<ButtonProps>>(
   (
@@ -95,7 +95,7 @@ export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildre
       loading,
       trailingIcon,
       fullWidth,
-      variant = 'primary',
+      colour = 'primary',
       rounded,
       ...props
     },
@@ -103,7 +103,7 @@ export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildre
   ) => {
     const buttonClasses = twMerge(
       clsx(
-        styles.variant[variant],
+        styles.colour[colour],
         styles.size[size],
         rounded ? styles.rounded.full : styles.rounded.default,
         !!leadingIcon || !!trailingIcon ? 'inline-flex items-center space-x-2' : '',

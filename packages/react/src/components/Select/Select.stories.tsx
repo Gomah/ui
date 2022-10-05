@@ -39,7 +39,7 @@ Examples.args = {
   // selected: 'One',
   // by: 'id',
   // displayKey: 'value',
-  variant: 'primary',
+  colour: 'primary',
   // options: [
   //   { id: '1', value: 'One', description: 'This is number one' },
   //   { id: '2', value: 'Two', description: 'This is number two' },

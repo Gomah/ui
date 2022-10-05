@@ -1,5 +1,5 @@
 import { action } from '@ladle/react';
-import { Switch, SwitchProps, SwitchVariant } from './Switch';
+import { Switch, SwitchProps, SwitchColour } from './Switch';
 import type { Story } from '@ladle/react';
 import { useState } from 'react';
 
@@ -18,13 +18,13 @@ export const Examples: Story<SwitchProps> = (props) => {
 };
 
 Examples.args = {
-  variant: 'primary',
+  colour: 'primary',
   checked: false,
 };
 
 Examples.argTypes = {
-  variant: {
-    options: ['primary', 'dark', 'error', 'warning', 'success'] as SwitchVariant[],
+  colour: {
+    options: ['primary', 'dark', 'error', 'warning', 'success'] as SwitchColour[],
     control: { type: 'select' },
   },
 };
