@@ -27,6 +27,8 @@ const styles = /*tw*/ {
   },
 
   shadow: 'shadow-xs',
+  rounded: 'rounded-md',
+  transition: 'transition-shadow',
 };
 
 export type InputSize = keyof typeof styles.size;
@@ -41,7 +43,9 @@ export const Input = React.forwardRef<HTMLInputElement, React.PropsWithRef<Input
         styles.size[size],
         styles.colour[colour].default,
         styles.shadow,
-        'block rounded-md w-full'
+        styles.transition,
+        styles.rounded,
+        'block w-full'
       ),
       className
     );
