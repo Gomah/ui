@@ -38,7 +38,6 @@ __metadata:
     "@testing-library/user-event": 14.4.3
     "@types/react": 18.0.21
     "@types/react-dom": 18.0.6
-    "@uiball/loaders": 1.2.6
     autoprefixer: 10.4.12
     clsx: 1.2.1
     concurrently: 7.4.0
@@ -3337,16 +3336,6 @@ __metadata:
     "@typescript-eslint/types": 5.38.1
     eslint-visitor-keys: ^3.3.0
   checksum: 01c83a42900f8ab721bd0857abcc000a15183eb26d2d61cceeaef018a83a91325f48c0112d4356383c41dce23174a305bb3352af4705a61d1da46f8ac0e88340
-  languageName: node
-  linkType: hard
-
-"@uiball/loaders@npm:1.2.6":
-  version: 1.2.6
-  resolution: "@uiball/loaders@npm:1.2.6"
-  peerDependencies:
-    react: ">=16.8.0"
-    react-dom: ">=16.8.0"
-  checksum: f5222ab2b9ca8eb255b88dd9f40e6d9de91e4beabbe92083132ecdf2eb2977e2b8dbe7a879c7cb50c3368faed55568c7d1cfa2f978fab6c85e6d04a8c6718268
   languageName: node
   linkType: hard
 
