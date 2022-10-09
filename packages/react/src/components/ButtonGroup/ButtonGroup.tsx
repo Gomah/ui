@@ -10,6 +10,7 @@ export const ButtonGroup = React.forwardRef<
   const childrenWithProps = React.Children.map(children, (child, index) => {
     if (React.isValidElement(child)) {
       return React.cloneElement(child, {
+        ...props,
         // @ts-ignore
         className: clsx('rounded-none', {
           'rounded-l-lg': index === 0,

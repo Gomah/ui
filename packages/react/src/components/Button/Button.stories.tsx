@@ -8,12 +8,12 @@ export const Examples: Story<ButtonProps> = (props) => {
     <div className="space-y-8">
       <div className="space-y-4">
         <div className="space-x-4">
-          <Button {...props} >
+          <Button {...props}>
             Button
           </Button>
         </div>
         <div className="space-x-4">
-          <ButtonGroup>
+          <ButtonGroup {...props}>
             <Button>One</Button>
             <Button>Two</Button>
             <Button>Three</Button>
