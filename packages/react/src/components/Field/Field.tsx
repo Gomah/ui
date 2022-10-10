@@ -76,7 +76,7 @@ const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
             )}
           </div>
         </div>
-        {message ? <p className={messageClass}>{message}</p> : ''}
+        {message && <p className={messageClass}>{message}</p>}
       </div>
     );
   }
