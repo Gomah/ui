@@ -5,5 +5,6 @@ export const shadows = {
   lg: '0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03)',
   xl: '0px 20px 24px -4px rgba(16, 24, 40, 0.08), 0px 8px 8px -4px rgba(16, 24, 40, 0.03)',
   '2xl': '0px 24px 48px -12px rgba(16, 24, 40, 0.18)',
-  '3xl': '0px 32px 64px -12px rgba(16, 24, 40, 0.14)'
+  '3xl': '0px 32px 64px -12px rgba(16, 24, 40, 0.14)',
+  inner: 'inset 0 2px 4px 0 rgb(16, 24, 40 / 0.05)',
 };
