@@ -28,7 +28,7 @@ const styles = /*tw*/ {
 
   shadow: 'shadow-xs',
   rounded: 'rounded-md',
-  transition: 'transition-shadow',
+  transition: 'transition',
 };
 
 export type InputSize = keyof typeof styles.size;

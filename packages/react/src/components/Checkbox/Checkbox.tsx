@@ -31,7 +31,7 @@ const Checkbox = React.forwardRef<HTMLInputElement, React.PropsWithRef<CheckboxP
     const checkboxClasses = twMerge(
       clsx(
         // Note, @tailwindcss/forms adds a focus:ring-offset-2, we want 0
-        'rounded focus:ring-offset-0 transition-colors',
+        'rounded focus:ring-offset-0 transition',
         'focus-visible:ring-4 focus:ring-0',
         styles.size[size],
         styles.colour[colour]
