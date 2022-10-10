@@ -48,6 +48,7 @@ const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
       if (React.isValidElement(child)) {
         return React.cloneElement(child, {
           // @ts-ignore
+          size,
           colour,
         });
       }
