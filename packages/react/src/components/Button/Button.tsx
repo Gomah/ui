@@ -37,9 +37,7 @@ export interface ButtonProps extends React.ComponentPropsWithRef<'button'> {
    */
   loading?: boolean;
 
-  /**
-   * Full width?
-   */
+  /** Full width */
   fullWidth?: boolean;
 
   loadingSpinner?: React.ReactNode;
@@ -83,6 +81,16 @@ const styles = /*tw*/ {
   transition: 'transition',
 };
 
+  const loaderStyle = /*tw*/ {
+    size: {
+      sm: 'h-5 w-5',
+      md: 'h-5 w-5',
+      lg: 'h-6 w-6',
+      xl: 'h-6 w-6',
+      '2xl': 'h-7 w-7'
+    }
+  }
+
 export type ButtonSize = keyof typeof styles.size;
 export type ButtonColour = keyof typeof styles.colour;
 
@@ -124,7 +132,7 @@ export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildre
         {loading ? (
           loadingSpinner || (
             <svg
-              className="h-5 w-5 animate-spin"
+              className={clsx(loaderStyle.size[size], 'animate-spin')}
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
               viewBox="0 0 24 24"
