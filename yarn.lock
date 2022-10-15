@@ -29,7 +29,7 @@ __metadata:
     "@heroicons/react": 2.0.12
     "@ladle/react": 2.4.4
     "@playwright/test": 1.27.1
-    "@swc/core": 1.3.7
+    "@swc/core": 1.3.8
     "@tailwindcss/aspect-ratio": 0.4.2
     "@tailwindcss/forms": 0.5.3
     "@tailwindcss/typography": 0.5.7
@@ -46,17 +46,17 @@ __metadata:
     eslint: 8.25.0
     framer-motion: 7.5.3
     jsdom: 20.0.1
-    postcss: 8.4.17
+    postcss: 8.4.18
     prettier-plugin-tailwindcss: 0.1.13
     react: 18.2.0
     react-dom: 18.2.0
     start-server-and-test: 1.14.0
     sync-fetch: 0.4.2
-    tailwind-merge: 1.6.1
+    tailwind-merge: 1.6.2
     tailwindcss: 3.1.8
     tsup: 6.2.3
     typescript: 4.8.4
-    vitest: 0.24.1
+    vitest: 0.24.3
   languageName: unknown
   linkType: soft
 
@@ -65,7 +65,7 @@ __metadata:
   resolution: "@acme/tailwind-preset@workspace:packages/tailwind-preset"
   dependencies:
     "@acme/tokens": "*"
-    "@swc/core": 1.3.7
+    "@swc/core": 1.3.8
     tailwindcss: 3.1.8
     tsup: 6.2.3
   languageName: unknown
@@ -75,7 +75,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@acme/tokens@workspace:packages/tokens"
   dependencies:
-    "@swc/core": 1.3.7
+    "@swc/core": 1.3.8
     tsup: 6.2.3
   languageName: unknown
   linkType: soft
@@ -2617,126 +2617,126 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core-android-arm-eabi@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core-android-arm-eabi@npm:1.3.7"
+"@swc/core-android-arm-eabi@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core-android-arm-eabi@npm:1.3.8"
   dependencies:
     "@swc/wasm": 1.2.122
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@swc/core-android-arm64@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core-android-arm64@npm:1.3.7"
+"@swc/core-android-arm64@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core-android-arm64@npm:1.3.8"
   dependencies:
     "@swc/wasm": 1.2.130
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-arm64@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core-darwin-arm64@npm:1.3.7"
+"@swc/core-darwin-arm64@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core-darwin-arm64@npm:1.3.8"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-x64@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core-darwin-x64@npm:1.3.7"
+"@swc/core-darwin-x64@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core-darwin-x64@npm:1.3.8"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-freebsd-x64@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core-freebsd-x64@npm:1.3.7"
+"@swc/core-freebsd-x64@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core-freebsd-x64@npm:1.3.8"
   dependencies:
     "@swc/wasm": 1.2.130
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm-gnueabihf@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.7"
+"@swc/core-linux-arm-gnueabihf@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.8"
   dependencies:
     "@swc/wasm": 1.2.130
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-gnu@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.7"
+"@swc/core-linux-arm64-gnu@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.8"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-musl@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core-linux-arm64-musl@npm:1.3.7"
+"@swc/core-linux-arm64-musl@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core-linux-arm64-musl@npm:1.3.8"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-gnu@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core-linux-x64-gnu@npm:1.3.7"
+"@swc/core-linux-x64-gnu@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core-linux-x64-gnu@npm:1.3.8"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-musl@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core-linux-x64-musl@npm:1.3.7"
+"@swc/core-linux-x64-musl@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core-linux-x64-musl@npm:1.3.8"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-win32-arm64-msvc@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.7"
+"@swc/core-win32-arm64-msvc@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.8"
   dependencies:
     "@swc/wasm": 1.2.130
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-win32-ia32-msvc@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.7"
+"@swc/core-win32-ia32-msvc@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.8"
   dependencies:
     "@swc/wasm": 1.2.130
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@swc/core-win32-x64-msvc@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core-win32-x64-msvc@npm:1.3.7"
+"@swc/core-win32-x64-msvc@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core-win32-x64-msvc@npm:1.3.8"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core@npm:1.3.7":
-  version: 1.3.7
-  resolution: "@swc/core@npm:1.3.7"
+"@swc/core@npm:1.3.8":
+  version: 1.3.8
+  resolution: "@swc/core@npm:1.3.8"
   dependencies:
-    "@swc/core-android-arm-eabi": 1.3.7
-    "@swc/core-android-arm64": 1.3.7
-    "@swc/core-darwin-arm64": 1.3.7
-    "@swc/core-darwin-x64": 1.3.7
-    "@swc/core-freebsd-x64": 1.3.7
-    "@swc/core-linux-arm-gnueabihf": 1.3.7
-    "@swc/core-linux-arm64-gnu": 1.3.7
-    "@swc/core-linux-arm64-musl": 1.3.7
-    "@swc/core-linux-x64-gnu": 1.3.7
-    "@swc/core-linux-x64-musl": 1.3.7
-    "@swc/core-win32-arm64-msvc": 1.3.7
-    "@swc/core-win32-ia32-msvc": 1.3.7
-    "@swc/core-win32-x64-msvc": 1.3.7
+    "@swc/core-android-arm-eabi": 1.3.8
+    "@swc/core-android-arm64": 1.3.8
+    "@swc/core-darwin-arm64": 1.3.8
+    "@swc/core-darwin-x64": 1.3.8
+    "@swc/core-freebsd-x64": 1.3.8
+    "@swc/core-linux-arm-gnueabihf": 1.3.8
+    "@swc/core-linux-arm64-gnu": 1.3.8
+    "@swc/core-linux-arm64-musl": 1.3.8
+    "@swc/core-linux-x64-gnu": 1.3.8
+    "@swc/core-linux-x64-musl": 1.3.8
+    "@swc/core-win32-arm64-msvc": 1.3.8
+    "@swc/core-win32-ia32-msvc": 1.3.8
+    "@swc/core-win32-x64-msvc": 1.3.8
   dependenciesMeta:
     "@swc/core-android-arm-eabi":
       optional: true
@@ -2766,7 +2766,7 @@ __metadata:
       optional: true
   bin:
     swcx: run_swcx.js
-  checksum: 1f3604ef3555130366fdde34b3a1b5d4d4e58d67cfa77a71cd150125ea67b6fb66485ebe48e61980629a2abbb5f23f012fc3c9aace3086d75ad96d8a8bb1d71d
+  checksum: 0f4afe1cdfe0fc7c471f77ad9138cd46c65770060ed47a1ed13fdffc1a580c2b8aa4cbb936c1f9da61e925e3d964c6d73dc61888982502b5da148d64028d17b2
   languageName: node
   linkType: hard
 
@@ -3176,10 +3176,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:18.8.4":
-  version: 18.8.4
-  resolution: "@types/node@npm:18.8.4"
-  checksum: c2b87f6b0b1f02b2ce61ca7cb93ea287119bda086a3f33e48da8f5e70c24ad7141cc3465946e0e36abb7eba70c7b320c7659842096e4aa573b3a8d557322c818
+"@types/node@npm:*, @types/node@npm:18.11.0":
+  version: 18.11.0
+  resolution: "@types/node@npm:18.11.0"
+  checksum: f27f899ab428e5732f04fadadc9203f44bdf3abf56474540ee27da90e4f2ba133faf87263cada4d2271955f92ee6a142bd50683c86290fe5070c19aac44fd654
   languageName: node
   linkType: hard
 
@@ -10350,13 +10350,13 @@ __metadata:
     "@acme/tokens": "*"
     "@acme/tsconfig": "*"
     "@heroicons/react": 2.0.12
-    "@types/node": 18.8.4
+    "@types/node": 18.11.0
     "@types/react": 18.0.21
     autoprefixer: 10.4.12
     eslint: 8.25.0
     next: 12.3.1
     next-transpile-modules: 9.1.0
-    postcss: 8.4.17
+    postcss: 8.4.18
     react: 18.2.0
     react-dom: 18.2.0
     tailwindcss: 3.1.8
@@ -11147,14 +11147,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.17, postcss@npm:^8.4.14, postcss@npm:^8.4.16":
-  version: 8.4.17
-  resolution: "postcss@npm:8.4.17"
+"postcss@npm:8.4.18, postcss@npm:^8.4.14, postcss@npm:^8.4.16":
+  version: 8.4.18
+  resolution: "postcss@npm:8.4.18"
   dependencies:
     nanoid: ^3.3.4
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
-  checksum: a6d9096dd711e17f7b1d18ff5dcb4fdedf3941d5a3dc8b0e4ea873b8f31972d57f73d6da9a8aed7ff389eb52190ed34f6a94f299a7f5ddc68b08a24a48f77eb9
+  checksum: 9349fd99849b2e3d2e134ff949b7770ecb12375f352723ce2bcc06167eba3850ea7844c1b191a85cd915d6a396b4e8ee9a5267e6cc5d8d003d0cbc7a97555d39
   languageName: node
   linkType: hard
 
@@ -11788,7 +11788,7 @@ __metadata:
     autoprefixer: 10.4.12
     concurrently: 7.4.0
     eslint: 8.25.0
-    postcss: 8.4.17
+    postcss: 8.4.18
     react: 18.2.0
     react-dom: 18.2.0
     tailwindcss: 3.1.8
@@ -12918,10 +12918,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwind-merge@npm:1.6.1":
-  version: 1.6.1
-  resolution: "tailwind-merge@npm:1.6.1"
-  checksum: d698c457a29d7defc6f0946ea4fc117250ab35b24791a02e9ce3a8015614d2460679717f7fc200b7dc93b29529d959a7d39bca9856e40e8ed9044705e6ea9fac
+"tailwind-merge@npm:1.6.2":
+  version: 1.6.2
+  resolution: "tailwind-merge@npm:1.6.2"
+  checksum: 2017a9a5dbec56315ba191a87c78d7d94d125b1a78753931f1d222bcc89bdf9b32c03a1739f517ab62669d6ce88ad02de9509cb0349f13f9cf925defb499c627
   languageName: node
   linkType: hard
 
@@ -14029,9 +14029,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:0.24.1":
-  version: 0.24.1
-  resolution: "vitest@npm:0.24.1"
+"vitest@npm:0.24.3":
+  version: 0.24.3
+  resolution: "vitest@npm:0.24.3"
   dependencies:
     "@types/chai": ^4.3.3
     "@types/chai-subset": ^1.3.3
@@ -14063,7 +14063,7 @@ __metadata:
       optional: true
   bin:
     vitest: vitest.mjs
-  checksum: 52e87aec70351eade4f0fd4c240046cedf68fba8b2bb2d8a592036c69b8a1501a9ad0a790d5d7f8927faf27dd3cafb3609174e7bd3602a2c4dd26fb28e922337
+  checksum: dd954f57396b81df466dd4346aa6c95709a1b3c2409d5526d3172fa34ec684f756a855f885778929a6b903a22b2517ff79d22f936fb3e4d7d54ff24e8e577459
   languageName: node
   linkType: hard
 
