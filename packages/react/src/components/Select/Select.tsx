@@ -45,7 +45,7 @@ function _select<T>(
     return Array.isArray(selected)
       ? // @ts-ignore
         options.filter((option) => selected?.includes(by ? option[by] : option))
-      : options.find((option) => (by ? option[by] : option === selected));
+      : options.find((option) => (by ? option[by] === selected : option === selected));
   }, [by, selected, options]);
 
   const buttonClassNames = twMerge(
