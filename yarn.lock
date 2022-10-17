@@ -29,7 +29,7 @@ __metadata:
     "@heroicons/react": 2.0.12
     "@ladle/react": 2.4.4
     "@playwright/test": 1.27.1
-    "@swc/core": 1.3.8
+    "@swc/core": 1.3.9
     "@tailwindcss/aspect-ratio": 0.4.2
     "@tailwindcss/forms": 0.5.3
     "@tailwindcss/typography": 0.5.7
@@ -44,7 +44,7 @@ __metadata:
     clsx: 1.2.1
     concurrently: 7.4.0
     eslint: 8.25.0
-    framer-motion: 7.5.3
+    framer-motion: 7.5.4
     jsdom: 20.0.1
     postcss: 8.4.18
     prettier-plugin-tailwindcss: 0.1.13
@@ -54,7 +54,7 @@ __metadata:
     sync-fetch: 0.4.2
     tailwind-merge: 1.6.2
     tailwindcss: 3.1.8
-    tsup: 6.2.3
+    tsup: 6.3.0
     typescript: 4.8.4
     vitest: 0.24.3
   languageName: unknown
@@ -65,9 +65,9 @@ __metadata:
   resolution: "@acme/tailwind-preset@workspace:packages/tailwind-preset"
   dependencies:
     "@acme/tokens": "*"
-    "@swc/core": 1.3.8
+    "@swc/core": 1.3.9
     tailwindcss: 3.1.8
-    tsup: 6.2.3
+    tsup: 6.3.0
   languageName: unknown
   linkType: soft
 
@@ -75,8 +75,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@acme/tokens@workspace:packages/tokens"
   dependencies:
-    "@swc/core": 1.3.8
-    tsup: 6.2.3
+    "@swc/core": 1.3.9
+    tsup: 6.3.0
   languageName: unknown
   linkType: soft
 
@@ -2617,126 +2617,126 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@swc/core-android-arm-eabi@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core-android-arm-eabi@npm:1.3.8"
+"@swc/core-android-arm-eabi@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core-android-arm-eabi@npm:1.3.9"
   dependencies:
     "@swc/wasm": 1.2.122
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@swc/core-android-arm64@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core-android-arm64@npm:1.3.8"
+"@swc/core-android-arm64@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core-android-arm64@npm:1.3.9"
   dependencies:
     "@swc/wasm": 1.2.130
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-arm64@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core-darwin-arm64@npm:1.3.8"
+"@swc/core-darwin-arm64@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core-darwin-arm64@npm:1.3.9"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-darwin-x64@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core-darwin-x64@npm:1.3.8"
+"@swc/core-darwin-x64@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core-darwin-x64@npm:1.3.9"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-freebsd-x64@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core-freebsd-x64@npm:1.3.8"
+"@swc/core-freebsd-x64@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core-freebsd-x64@npm:1.3.9"
   dependencies:
     "@swc/wasm": 1.2.130
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm-gnueabihf@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.8"
+"@swc/core-linux-arm-gnueabihf@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.9"
   dependencies:
     "@swc/wasm": 1.2.130
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-gnu@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.8"
+"@swc/core-linux-arm64-gnu@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.9"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-arm64-musl@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core-linux-arm64-musl@npm:1.3.8"
+"@swc/core-linux-arm64-musl@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core-linux-arm64-musl@npm:1.3.9"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-gnu@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core-linux-x64-gnu@npm:1.3.8"
+"@swc/core-linux-x64-gnu@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core-linux-x64-gnu@npm:1.3.9"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@swc/core-linux-x64-musl@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core-linux-x64-musl@npm:1.3.8"
+"@swc/core-linux-x64-musl@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core-linux-x64-musl@npm:1.3.9"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@swc/core-win32-arm64-msvc@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.8"
+"@swc/core-win32-arm64-msvc@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.9"
   dependencies:
     "@swc/wasm": 1.2.130
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@swc/core-win32-ia32-msvc@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.8"
+"@swc/core-win32-ia32-msvc@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.9"
   dependencies:
     "@swc/wasm": 1.2.130
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@swc/core-win32-x64-msvc@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core-win32-x64-msvc@npm:1.3.8"
+"@swc/core-win32-x64-msvc@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core-win32-x64-msvc@npm:1.3.9"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
 
-"@swc/core@npm:1.3.8":
-  version: 1.3.8
-  resolution: "@swc/core@npm:1.3.8"
+"@swc/core@npm:1.3.9":
+  version: 1.3.9
+  resolution: "@swc/core@npm:1.3.9"
   dependencies:
-    "@swc/core-android-arm-eabi": 1.3.8
-    "@swc/core-android-arm64": 1.3.8
-    "@swc/core-darwin-arm64": 1.3.8
-    "@swc/core-darwin-x64": 1.3.8
-    "@swc/core-freebsd-x64": 1.3.8
-    "@swc/core-linux-arm-gnueabihf": 1.3.8
-    "@swc/core-linux-arm64-gnu": 1.3.8
-    "@swc/core-linux-arm64-musl": 1.3.8
-    "@swc/core-linux-x64-gnu": 1.3.8
-    "@swc/core-linux-x64-musl": 1.3.8
-    "@swc/core-win32-arm64-msvc": 1.3.8
-    "@swc/core-win32-ia32-msvc": 1.3.8
-    "@swc/core-win32-x64-msvc": 1.3.8
+    "@swc/core-android-arm-eabi": 1.3.9
+    "@swc/core-android-arm64": 1.3.9
+    "@swc/core-darwin-arm64": 1.3.9
+    "@swc/core-darwin-x64": 1.3.9
+    "@swc/core-freebsd-x64": 1.3.9
+    "@swc/core-linux-arm-gnueabihf": 1.3.9
+    "@swc/core-linux-arm64-gnu": 1.3.9
+    "@swc/core-linux-arm64-musl": 1.3.9
+    "@swc/core-linux-x64-gnu": 1.3.9
+    "@swc/core-linux-x64-musl": 1.3.9
+    "@swc/core-win32-arm64-msvc": 1.3.9
+    "@swc/core-win32-ia32-msvc": 1.3.9
+    "@swc/core-win32-x64-msvc": 1.3.9
   dependenciesMeta:
     "@swc/core-android-arm-eabi":
       optional: true
@@ -2766,7 +2766,7 @@ __metadata:
       optional: true
   bin:
     swcx: run_swcx.js
-  checksum: 0f4afe1cdfe0fc7c471f77ad9138cd46c65770060ed47a1ed13fdffc1a580c2b8aa4cbb936c1f9da61e925e3d964c6d73dc61888982502b5da148d64028d17b2
+  checksum: 761918f1bca5d494eaaafd49720717e3b3071df5bc6ef8b298a778ba4e4d20bc5a78c939a0b1c98623f9fe23e535a16a359179b72390cd1f5cbc891ea53c22fa
   languageName: node
   linkType: hard
 
@@ -3412,10 +3412,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/build-utils@npm:5.5.4":
-  version: 5.5.4
-  resolution: "@vercel/build-utils@npm:5.5.4"
-  checksum: f8862d1d9b77155b01ba56a03a12e1b34f09208bee72d4c71d0f9fc1b9972bba5e909e18bce84c7ab354314d6a738ea7c63f90d0f2b41344d1c206fdd799126f
+"@vercel/build-utils@npm:5.5.5":
+  version: 5.5.5
+  resolution: "@vercel/build-utils@npm:5.5.5"
+  checksum: fc4f65a3c5586e91f9df2a49ae40885b9b4d9c941f4077c0bb886260ec041cfe03143c8a1302ad8d9e2141f0ac113fdac2d69c766f5a578f2b32c31a1cfa59be
   languageName: node
   linkType: hard
 
@@ -3426,13 +3426,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:2.5.24":
-  version: 2.5.24
-  resolution: "@vercel/node@npm:2.5.24"
+"@vercel/node@npm:2.5.25":
+  version: 2.5.25
+  resolution: "@vercel/node@npm:2.5.25"
   dependencies:
     "@edge-runtime/vm": 1.1.0-beta.36
     "@types/node": "*"
-    "@vercel/build-utils": 5.5.4
+    "@vercel/build-utils": 5.5.5
     "@vercel/node-bridge": 3.0.0
     "@vercel/static-config": 2.0.3
     edge-runtime: 1.1.0-beta.38
@@ -3441,7 +3441,7 @@ __metadata:
     node-fetch: 2.6.7
     ts-node: 8.9.1
     typescript: 4.3.4
-  checksum: fdf19b88df1136c64dcfb13c8680b10346110ea3543a0ecde2b54b199a910cfa7a5255820c0f38e640a644acae18f527ad77d9be2df3bab79df2ee61bdf2f8b2
+  checksum: 6013411277476c596091aa734cfcba7b3996a5c4fcbf8d28151ed3bd8ee977d4e67a79c877eb1e9330a9c181cce6f32e8193aa411c5aae26f9c7698ec2294839
   languageName: node
   linkType: hard
 
@@ -7364,9 +7364,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:7.5.3":
-  version: 7.5.3
-  resolution: "framer-motion@npm:7.5.3"
+"framer-motion@npm:7.5.4":
+  version: 7.5.4
+  resolution: "framer-motion@npm:7.5.4"
   dependencies:
     "@emotion/is-prop-valid": ^0.8.2
     "@motionone/dom": 10.13.1
@@ -7381,7 +7381,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 5b038ecb44e355916cef2310a1f0df7937f7e38e36b91e35a1dc0425b7717f8e5dd76b5cbf0acd38b81027ba0d8fc33d9148d901ecee7017adc76e2ae466bfea
+  checksum: 1218844b50f33aede8ab002a96f264649c572a703c9a72e05e2150656974421b655da1a00bf91c3dbee2f206b5e779361b348519161df99b5767e243b936087f
   languageName: node
   linkType: hard
 
@@ -11784,7 +11784,7 @@ __metadata:
     "@remix-run/vercel": 1.7.2
     "@types/react": 18.0.21
     "@types/react-dom": 18.0.6
-    "@vercel/node": 2.5.24
+    "@vercel/node": 2.5.25
     autoprefixer: 10.4.12
     concurrently: 7.4.0
     eslint: 8.25.0
@@ -13369,9 +13369,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsup@npm:6.2.3":
-  version: 6.2.3
-  resolution: "tsup@npm:6.2.3"
+"tsup@npm:6.3.0":
+  version: 6.3.0
+  resolution: "tsup@npm:6.3.0"
   dependencies:
     bundle-require: ^3.1.0
     cac: ^6.7.12
@@ -13401,7 +13401,7 @@ __metadata:
   bin:
     tsup: dist/cli-default.js
     tsup-node: dist/cli-node.js
-  checksum: f1cb8f4f83a4a304f61d57dc62fb7176d1fa8842485a7dec4c3fd7cb98e169dbdc4bf52c45ff8cede6843b791fe4a0f70579b34684f568af3c2c3cb2f8469af4
+  checksum: f1fccd555a77ff82b3b3d4ce28188f5703695af5e9d593a4edcfc3807cbebb5b04e619ad9ae0b0c92830cbbcbf6d76356365a8986ebe82d7389151a4f66a6c49
   languageName: node
   linkType: hard
 
