@@ -10,7 +10,7 @@ export interface SelectProps<T> extends Omit<React.ComponentPropsWithRef<'div'>,
   displayKey?: keyof T;
   selected?: string | string[];
   placeholder?: string;
-  className?: string;
+  label?: string;
   disabled?: boolean;
   multiple?: boolean;
   onChange?: (option: T) => void;
@@ -31,6 +31,7 @@ function _select<T>(
     onChange,
     options,
     displayKey,
+    label,
     disabled,
     multiple,
     selected,
@@ -77,6 +78,7 @@ function _select<T>(
 
   return (
     <Listbox
+      {...props}
       // @ts-ignore
       ref={ref}
       by={by as string}
@@ -86,54 +88,57 @@ function _select<T>(
       onChange={onChange}
     >
       {({ open }) => (
-        <div className="relative mt-1">
-          <Listbox.Button className={clsx(buttonClassNames, open && 'ring-4 ring-primary-100')}>
-            <span className="block truncate">
-              {!!displayKey
-                ? // @ts-ignore
-                  selectedOption?.[displayKey]
-                : // @ts-ignore
-                  selectedOption?.join(', ') || (
-                    <span className="text-gray-500">{placeholder}</span>
-                  )}
-            </span>
-            <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
-              <ChevronUpDownIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
-            </span>
-          </Listbox.Button>
-          <Transition
-            as={React.Fragment}
-            leave="transition ease-in duration-100"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <Listbox.Options className={optionsClassNames}>
-              {options.map((option: T) => (
-                <Listbox.Option
-                  // @ts-ignore
-                  key={by ? option[by] : option}
-                  value={option}
-                  className={({ active }) => optionContainerClassNames(active)}
-                >
-                  {({ selected, active, disabled }) => (
-                    <div className={optionClassNames({ selected, active, disabled})}>
-                      <span
-                        className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}
-                      >
-                        {/* @ts-ignore */}
-                        {displayKey ? option[displayKey] : option}
-                      </span>
-                      {selected ? (
-                        <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-primary-600">
-                          <CheckIcon className="h-5 w-5" aria-hidden="true" />
+        <div>
+          {label && <Listbox.Label className="font-medium text-gray-600">{label}</Listbox.Label>}
+          <div className="relative mt-1">
+            <Listbox.Button className={clsx(buttonClassNames, open && 'ring-4 ring-primary-100')}>
+              <span className="block truncate">
+                {!!displayKey
+                  ? // @ts-ignore
+                    selectedOption?.[displayKey]
+                  : // @ts-ignore
+                    selectedOption?.join(', ') || (
+                      <span className="text-gray-500">{placeholder}</span>
+                    )}
+              </span>
+              <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
+                <ChevronUpDownIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+              </span>
+            </Listbox.Button>
+            <Transition
+              as={React.Fragment}
+              leave="transition ease-in duration-100"
+              leaveFrom="opacity-100"
+              leaveTo="opacity-0"
+            >
+              <Listbox.Options className={optionsClassNames}>
+                {options.map((option: T) => (
+                  <Listbox.Option
+                    // @ts-ignore
+                    key={by ? option[by] : option}
+                    value={option}
+                    className={({ active }) => optionContainerClassNames(active)}
+                  >
+                    {({ selected, active, disabled }) => (
+                      <div className={optionClassNames({ selected, active, disabled})}>
+                        <span
+                          className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}
+                        >
+                          {/* @ts-ignore */}
+                          {displayKey ? option[displayKey] : option}
                         </span>
-                      ) : null}
-                    </div>
-                  )}
-                </Listbox.Option>
-              ))}
-            </Listbox.Options>
-          </Transition>
+                        {selected ? (
+                          <span className="absolute inset-y-0 right-0 flex items-center pr-4 text-primary-600">
+                            <CheckIcon className="h-5 w-5" aria-hidden="true" />
+                          </span>
+                        ) : null}
+                      </div>
+                    )}
+                  </Listbox.Option>
+                ))}
+              </Listbox.Options>
+            </Transition>
+          </div>
         </div>
       )}
     </Listbox>
