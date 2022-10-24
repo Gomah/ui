@@ -81,15 +81,15 @@ const styles = /*tw*/ {
   transition: 'transition',
 };
 
-  const loaderStyle = /*tw*/ {
-    size: {
-      sm: 'h-5 w-5',
-      md: 'h-5 w-5',
-      lg: 'h-6 w-6',
-      xl: 'h-6 w-6',
-      '2xl': 'h-7 w-7'
-    }
-  }
+const loaderStyle = /*tw*/ {
+  size: {
+    sm: 'h-5 w-5',
+    md: 'h-5 w-5',
+    lg: 'h-6 w-6',
+    xl: 'h-6 w-6',
+    '2xl': 'h-7 w-7',
+  },
+};
 
 export type ButtonSize = keyof typeof styles.size;
 export type ButtonColour = keyof typeof styles.colour;
@@ -116,7 +116,8 @@ export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildre
         styles.colour[colour],
         styles.size[size],
         rounded ? styles.rounded.full : styles.rounded.default,
-        (!!leadingIcon || !!trailingIcon || loading) && 'inline-flex items-center justify-center space-x-2',
+        (!!leadingIcon || !!trailingIcon || loading) &&
+          'inline-flex items-center justify-center space-x-2',
         styles.shadow,
         styles.focus,
         styles.border,
@@ -152,8 +153,7 @@ export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildre
               ></path>
             </svg>
           )
-        ) :
-        leadingIcon || trailingIcon ? (
+        ) : leadingIcon || trailingIcon ? (
           <>
             {leadingIcon && <span>{leadingIcon}</span>}
             <span>{children}</span>

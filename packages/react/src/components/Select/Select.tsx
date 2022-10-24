@@ -66,15 +66,13 @@ function _select<T>(
 
   const optionContainerClassNames = (active: boolean) =>
     clsx(
-      'relative cursor-default select-none py-0.5 px-1.5',
+      'relative cursor-default select-none py-0.5 px-1.5'
       // 'relative cursor-default select-none py-2 pl-10 pr-4',
       // active ? 'bg-primary-100 text-primary-900' : 'text-gray-900'
     );
 
-  const optionClassNames = ({ selected, active, disabled}: Record<string, boolean>) =>
-    clsx('pb-2.5 pl-2 pr-2.5 pt-2.5 space-x-2',
-      (selected || active) && 'bg-gray-50 rounded-md'
-    );
+  const optionClassNames = ({ selected, active, disabled }: Record<string, boolean>) =>
+    clsx('pb-2.5 pl-2 pr-2.5 pt-2.5 space-x-2', (selected || active) && 'bg-gray-50 rounded-md');
 
   return (
     <Listbox
@@ -120,7 +118,7 @@ function _select<T>(
                     className={({ active }) => optionContainerClassNames(active)}
                   >
                     {({ selected, active, disabled }) => (
-                      <div className={optionClassNames({ selected, active, disabled})}>
+                      <div className={optionClassNames({ selected, active, disabled })}>
                         <span
                           className={`block truncate ${selected ? 'font-medium' : 'font-normal'}`}
                         >
