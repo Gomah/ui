@@ -1,27 +1,29 @@
-const defaultTokens = require('@acme/tokens');
+import { mergeDeepRight } from 'rambda';
+import * as defaultTokens from '@acme/tokens';
 
-module.exports = function AcmeTailwindPreset({ tokens = defaultTokens } = { tokens: defaultTokens }) {
-  // TODO: Merge tokens with defaultTokens
+module.exports = function AcmeTailwindPreset(
+  { tokens = defaultTokens } = { tokens: defaultTokens }
+) {
+  const mergedTokens: typeof tokens = mergeDeepRight(defaultTokens, tokens);
+
   return {
     theme: {
       extend: {
         ringWidth: {
-          '1.5': '1.5px'
+          '1.5': '1.5px',
         },
         colors: {
-          ...tokens.colors,
+          ...mergedTokens.colors,
         },
         boxShadow: {
-          ...tokens.shadows,
-        }
-      }
+          ...mergedTokens.shadows,
+        },
+      },
     },
     plugins: [
       require('@tailwindcss/forms'),
       require('@tailwindcss/typography'),
       require('@tailwindcss/aspect-ratio'),
     ],
-  }
-}
-
-
+  };
+};

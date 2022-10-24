@@ -14,5 +14,8 @@
     "@swc/core": "1.3.10",
     "tailwindcss": "3.2.1",
     "tsup": "6.3.0"
+  },
+  "dependencies": {
+    "rambda": "7.3.0"
   }
 }
