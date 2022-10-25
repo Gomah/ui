@@ -16,6 +16,6 @@
     "tsup": "6.3.0"
   },
   "dependencies": {
-    "rambda": "7.3.0"
+    "ts-deepmerge": "4.0.0"
   }
 }

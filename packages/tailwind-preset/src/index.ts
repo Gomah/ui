@@ -1,10 +1,9 @@
-import { mergeDeepRight } from 'rambda';
 import * as defaultTokens from '@acme/tokens';
-
+import merge from 'ts-deepmerge';
 module.exports = function AcmeTailwindPreset(
   { tokens = defaultTokens } = { tokens: defaultTokens }
 ) {
-  const mergedTokens: typeof tokens = mergeDeepRight(defaultTokens, tokens);
+  const mergedTokens = merge(defaultTokens, tokens);
 
   return {
     theme: {

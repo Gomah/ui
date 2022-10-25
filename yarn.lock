@@ -67,8 +67,8 @@ __metadata:
   dependencies:
     "@acme/tokens": "*"
     "@swc/core": 1.3.10
-    rambda: 7.3.0
     tailwindcss: 3.2.1
+    ts-deepmerge: 4.0.0
     tsup: 6.3.0
   languageName: unknown
   linkType: soft
@@ -11651,13 +11651,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rambda@npm:7.3.0":
-  version: 7.3.0
-  resolution: "rambda@npm:7.3.0"
-  checksum: 28dce46049f4eae21398ee9315b010df461bc761717f643e5dd0e1e725ccddf651327642a79c92d6cacd41a6a2a0d503352694642b861ce9583a6eb9421e6bce
-  languageName: node
-  linkType: hard
-
 "range-parser@npm:~1.2.1":
   version: 1.2.1
   resolution: "range-parser@npm:1.2.1"
@@ -13530,6 +13523,13 @@ __metadata:
   version: 2.1.0
   resolution: "trough@npm:2.1.0"
   checksum: a577bb561c2b401cc0e1d9e188fcfcdf63b09b151ff56a668da12197fe97cac15e3d77d5b51f426ccfd94255744a9118e9e9935afe81a3644fa1be9783c82886
+  languageName: node
+  linkType: hard
+
+"ts-deepmerge@npm:4.0.0":
+  version: 4.0.0
+  resolution: "ts-deepmerge@npm:4.0.0"
+  checksum: f0b3102a411895f1b2dce4387a94ea15a5ba0ca010e532ee3b88f942725d7c8d228ec9be20f4f7e95ebfd7aa1078cd8ac0dfa335358553423ee8b473d83a8d66
   languageName: node
   linkType: hard
 
