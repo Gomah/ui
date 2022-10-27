@@ -21,7 +21,7 @@ export default function ForgotPassword() {
             Reset password
           </Button>
 
-          <NextLink href="/auth/login/simple" passHref>
+          <NextLink href="/auth/login/simple" passHref legacyBehavior>
             <Link className="block text-center" weight="medium">
               Back to log in
             </Link>

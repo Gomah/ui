@@ -37,7 +37,7 @@ export default function Auth() {
 
           <Text size="sm" className="text-center">
             Don&apos;t have an account?{' '}
-            <NextLink href="/" passHref>
+            <NextLink href="/" passHref legacyBehavior>
               <Link weight="medium">Sign up</Link>
             </NextLink>
           </Text>

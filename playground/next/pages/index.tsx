@@ -1,5 +1,4 @@
 import { Button } from '@acme/react';
-import NextLink from 'next/link';
 
 export default function Templates() {
   return (
