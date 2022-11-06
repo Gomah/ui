@@ -9,11 +9,11 @@
   "scripts": {
     "dev": "concurrently npm:dev:ladle npm:dev:tsup",
     "dev:ladle": "FORCE_COLOR=1 ladle serve",
-    "dev:tsup": "FORCE_COLOR=1 tsup index.tsx --format esm,cjs --external react --dts --watch",
+    "dev:tsup": "FORCE_COLOR=1 tsup --watch",
     "build": "yarn build:components && yarn build:ladle",
     "build-preview": "ladle build && ladle preview -p 61000",
     "preview": "ladle preview -p 61000",
-    "build:components": "tsup index.tsx --format esm,cjs --external react --dts",
+    "build:components": "tsup",
     "build:ladle": "ladle build",
     "test:unit": "vitest run",
     "test:dev": "start-server-and-test dev 61000 'yarn playwright test ./tests/snapshot.spec.ts'",
