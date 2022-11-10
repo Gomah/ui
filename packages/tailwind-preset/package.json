@@ -12,10 +12,10 @@
   "devDependencies": {
     "@acme/tokens": "*",
     "@swc/core": "1.3.14",
-    "tailwindcss": "3.2.2",
+    "tailwindcss": "3.2.3",
     "tsup": "6.4.0"
   },
   "dependencies": {
-    "ts-deepmerge": "4.0.0"
+    "ts-deepmerge": "5.0.0"
   }
 }
