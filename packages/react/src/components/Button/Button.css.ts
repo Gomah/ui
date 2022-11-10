@@ -28,6 +28,7 @@ export const button = recipe({
         'bg-success-600 border-success-600 text-white hover:bg-success-700 hover:border-success-700 focus-visible:ring-success-100 disabled:bg-success-200 disabled:text-white disabled:border-success-200',
     },
 
+    /** Button size */
     size: {
       sm: 'py-2 px-3.5 text-sm',
       md: 'py-2.5 px-4 text-sm',
@@ -36,9 +37,15 @@ export const button = recipe({
       '2xl': 'py-4 px-7 text-lg',
     },
 
+    /** Rounded button */
     rounded: {
       true: 'rounded-full',
       false: 'rounded-lg',
+    },
+
+    /** Full width */
+    fullWidth: {
+      true: 'w-full',
     },
   },
 
