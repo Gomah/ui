@@ -56,4 +56,17 @@ export const button = recipe({
   },
 });
 
+export const loader = recipe({
+  base: 'animate-spin',
+  variants: {
+    size: {
+      sm: 'h-5 w-5',
+      md: 'h-5 w-5',
+      lg: 'h-6 w-6',
+      xl: 'h-6 w-6',
+      '2xl': 'h-7 w-7',
+    },
+  },
+});
+
 export type ButtonVariants = RecipeVariants<typeof button>;

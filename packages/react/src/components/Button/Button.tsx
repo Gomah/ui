@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
-import { ButtonVariants, button } from './Button.css';
+import { ButtonVariants, button, loader } from './Button.css';
 
 export type ButtonProps = {
   /**
@@ -24,16 +24,6 @@ export type ButtonProps = {
   loadingSpinner?: React.ReactNode;
 } & React.ComponentPropsWithRef<'button'> &
   ButtonVariants;
-
-const loaderStyle = /*tw*/ {
-  size: {
-    sm: 'h-5 w-5',
-    md: 'h-5 w-5',
-    lg: 'h-6 w-6',
-    xl: 'h-6 w-6',
-    '2xl': 'h-7 w-7',
-  },
-};
 
 export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildren<ButtonProps>>(
   (
@@ -66,16 +56,15 @@ export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildre
       className
     );
 
+    const loaderClasses = loader({
+      size,
+    });
+
     return (
       <button ref={ref} {...props} className={buttonClasses}>
         {loading ? (
           loadingSpinner || (
-            <svg
-              className={clsx(loaderStyle.size[size], 'animate-spin')}
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-            >
+            <svg className={loaderClasses} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
               <circle
                 className="opacity-25"
                 cx="12"

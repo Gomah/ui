@@ -1,4 +1,3 @@
-import { ButtonVariants } from './Button.css';
 import type { Story } from '@ladle/react';
 import { ButtonGroup } from '../ButtonGroup/ButtonGroup';
 import { Button, ButtonProps } from './Button';
@@ -38,11 +37,11 @@ Examples.argTypes = {
     action: 'clicked',
   },
   size: {
-    options: ['md', 'sm', 'lg', 'xl', '2xl'],
+    options: ['md', 'sm', 'lg', 'xl', '2xl'] as ButtonProps['size'][],
     control: { type: 'select' },
   },
   intent: {
-    options: ['primary', 'white', 'secondary', 'success', 'error', 'warning'],
+    options: ['primary', 'white', 'secondary', 'success', 'error', 'warning'] as ButtonProps['intent'][],
     control: { type: 'select' },
   },
 };
