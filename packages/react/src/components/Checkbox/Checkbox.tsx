@@ -1,41 +1,21 @@
 import clsx from 'clsx';
 import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
+import { checkbox, CheckboxVariants } from './Checkbox.css';
 
-const styles = /*tw*/ {
-  size: {
-    sm: 'h-4 w-4',
-    md: 'h-5 w-5',
-    lg: 'h-6 w-6',
-  },
-
-  colour: {
-    primary:
-      'border-gray-300 hover:bg-primary-100 hover:border-primary-600 text-primary-600 focus:ring-primary-100 focus:border-primary-300',
-  },
-};
-
-type CheckboxSize = keyof typeof styles.size;
-type CheckboxColour = keyof typeof styles.colour;
-
-export interface CheckboxProps extends Omit<React.ComponentPropsWithRef<'input'>, 'size'> {
-  size?: CheckboxSize;
-
-  colour?: CheckboxColour;
-
-  label?: string;
-}
+export type CheckboxProps = { label?: string } & Omit<
+  React.ComponentPropsWithRef<'input'>,
+  'size'
+> &
+  CheckboxVariants;
 
 const Checkbox = React.forwardRef<HTMLInputElement, React.PropsWithRef<CheckboxProps>>(
-  ({ className, size = 'md', label, colour = 'primary', ...props }, ref) => {
+  ({ className, label, intent, size, ...props }, ref) => {
     const checkboxClasses = twMerge(
-      clsx(
-        // Note, @tailwindcss/forms adds a focus:ring-offset-2, we want 0
-        'rounded focus:ring-offset-0 transition',
-        'focus-visible:ring-4 focus:ring-0',
-        styles.size[size],
-        styles.colour[colour]
-      ),
+      checkbox({
+        intent,
+        size,
+      }),
       className
     );
 
