@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import * as React from 'react';
 
-export interface ButtonGroupProps extends React.ComponentPropsWithRef<'div'> {}
+export type ButtonGroupProps = React.ComponentPropsWithRef<'div'>;
 
 export const ButtonGroup = React.forwardRef<
   HTMLDivElement,

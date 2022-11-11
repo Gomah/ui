@@ -1,34 +1,31 @@
 import { ExclamationCircleIcon } from '@heroicons/react/24/outline';
-import clsx from 'clsx';
 import * as React from 'react';
 import { twMerge } from 'tailwind-merge';
+import {
+  fieldClassNames,
+  FieldVariants,
+  inputWrapperClassNames,
+  labelClassNames,
+  messageClassNames,
+} from './Field.css';
 
-const styles = /*tw*/ {
-  size: {
-    sm: 'text-sm',
-    md: 'text-base',
-  },
-};
-
-export interface FieldProps extends React.ComponentPropsWithRef<'div'> {
+export type FieldProps = {
   label: string;
   htmlFor: string;
   message?: string;
-  colour?: 'primary' | 'error';
-
-  size?: 'sm' | 'md';
 
   /**
    * Trailing icon
    * @usage <Field trailingIcon={<HomeIcon />}>Button</Field>
    */
   trailingIcon?: React.ReactNode;
-}
+} & React.ComponentPropsWithRef<'div'> &
+  FieldVariants;
 
 const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
   (
     {
-      colour = 'primary',
+      intent = 'primary',
       className,
       label,
       htmlFor,
@@ -40,25 +37,21 @@ const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
     },
     ref
   ) => {
-    const fieldClass = twMerge(clsx(styles.size[size]), className);
-    const labelClass = clsx(['block  font-medium text-gray-700']);
-    const inputWrapperClass = clsx('relative mt-1.5');
+    const fieldClass = twMerge(fieldClassNames({ size }), className);
+    const labelClass = labelClassNames();
+    const inputWrapperClass = inputWrapperClassNames();
+    const messageClass = messageClassNames({ intent });
 
     const childrenWithProps = React.Children.map(children, (child, index) => {
       if (React.isValidElement(child)) {
         return React.cloneElement(child, {
           // @ts-ignore
           size,
-          colour,
+          intent,
         });
       }
       return child;
     });
-
-    const messageClass = clsx(
-      'mt-2 text-sm',
-      colour === 'error' ? 'text-error-500' : 'text-gray-500'
-    );
 
     return (
       <div>
@@ -68,7 +61,7 @@ const Field = React.forwardRef<HTMLDivElement, React.PropsWithRef<FieldProps>>(
           </label>
           <div className={inputWrapperClass}>
             {childrenWithProps}
-            {colour === 'error' && (
+            {intent === 'error' && (
               <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
                 {trailingIcon || (
                   <ExclamationCircleIcon className="h-5 w-5 text-error-600" aria-hidden="true" />
