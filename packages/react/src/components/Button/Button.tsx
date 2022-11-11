@@ -64,7 +64,12 @@ export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildre
       <button ref={ref} {...props} className={buttonClasses}>
         {loading ? (
           loadingSpinner || (
-            <svg className={loaderClasses} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+            <svg
+              className={loaderClasses}
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
               <circle
                 className="opacity-25"
                 cx="12"

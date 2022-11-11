@@ -1,4 +1,4 @@
 module.exports = {
   root: true,
-  extends: ["@acme/custom"],
+  extends: ['@acme/custom'],
 };

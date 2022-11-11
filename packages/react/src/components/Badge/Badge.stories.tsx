@@ -1,4 +1,4 @@
-import { Badge, BadgeColour, BadgeProps, BadgeSize } from './Badge';
+import { Badge, BadgeProps } from './Badge';
 import type { Story } from '@ladle/react';
 
 export const Examples: Story<BadgeProps> = (props) => {
@@ -15,7 +15,7 @@ export const Examples: Story<BadgeProps> = (props) => {
 
 Examples.args = {
   size: 'md',
-  colour: 'gray',
+  intent: 'gray',
   outlined: false,
   closable: false,
   withDot: false,
@@ -23,11 +23,11 @@ Examples.args = {
 
 Examples.argTypes = {
   size: {
-    options: ['md', 'sm', 'lg'] as BadgeSize[],
+    options: ['md', 'sm', 'lg'] as BadgeProps['size'][],
     control: { type: 'select' },
   },
-  colour: {
-    options: ['gray', 'primary', 'error', 'success', 'warning'] as BadgeColour[],
+  intent: {
+    options: ['gray', 'primary', 'error', 'success', 'warning'] as BadgeProps['intent'][],
     control: { type: 'select' },
   },
 };

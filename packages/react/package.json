@@ -2,9 +2,9 @@
   "name": "@acme/react",
   "version": "0.0.0",
   "sideEffects": false,
-  "main": "./index.tsx",
-  "module": "./index.tsx",
-  "types": "./index.tsx",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./index.d.ts",
   "license": "MIT",
   "scripts": {
     "dev": "concurrently npm:dev:ladle npm:dev:tsup",

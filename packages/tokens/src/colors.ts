@@ -24,7 +24,7 @@ export const error = {
   '700': '#B42318',
   '800': '#912018',
   '900': '#7A271A',
-}
+};
 
 export const warning = {
   '25': '#FFFCF5',
@@ -38,10 +38,10 @@ export const warning = {
   '700': '#B54708',
   '800': '#93370D',
   '900': '#7A2E0E',
-}
+};
 
 export const success = {
-  '25': "#F6FEF9",
+  '25': '#F6FEF9',
   '50': '#ECFDF3',
   '100': '#D1FADF',
   '200': '#A6F4C5',
@@ -52,4 +52,4 @@ export const success = {
   '700': '#027A48',
   '800': '#05603A',
   '900': '#054F31',
-}
+};

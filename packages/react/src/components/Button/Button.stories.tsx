@@ -41,7 +41,14 @@ Examples.argTypes = {
     control: { type: 'select' },
   },
   intent: {
-    options: ['primary', 'white', 'secondary', 'success', 'error', 'warning'] as ButtonProps['intent'][],
+    options: [
+      'primary',
+      'white',
+      'secondary',
+      'success',
+      'error',
+      'warning',
+    ] as ButtonProps['intent'][],
     control: { type: 'select' },
   },
 };
