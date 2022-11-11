@@ -3,8 +3,9 @@ import { Listbox, Transition } from '@headlessui/react';
 import { CheckIcon, ChevronUpDownIcon } from '@heroicons/react/20/solid';
 import clsx from 'clsx';
 import { twMerge } from 'tailwind-merge';
+import { select, selectOptions, SelectVariants } from './Select.css';
 
-export interface SelectProps<T> extends Omit<React.ComponentPropsWithRef<'div'>, 'onChange'> {
+export type SelectProps<T> = {
   options: T[];
   by?: keyof T;
   displayKey?: keyof T;
@@ -14,16 +15,8 @@ export interface SelectProps<T> extends Omit<React.ComponentPropsWithRef<'div'>,
   disabled?: boolean;
   multiple?: boolean;
   onChange?: (option: T) => void;
-
-  size?: keyof typeof styles.size;
-}
-
-const styles = /*tw*/ {
-  size: {
-    sm: 'py-2 px-3 text-sm',
-    md: 'py-2.5 px-3.5 ',
-  },
-};
+} & Omit<React.ComponentPropsWithRef<'div'>, 'onChange'> &
+  SelectVariants;
 
 function _select<T>(
   {
@@ -50,19 +43,13 @@ function _select<T>(
   }, [by, selected, options]);
 
   const buttonClassNames = twMerge(
-    clsx(
-      styles.size[size],
-      'relative w-full bg-white cursor-default rounded-lg shadow-xs border border-gray-300 transition',
-      'text-left placeholder-gray-100',
-      '',
-      'focus:outline-none focus-visible:ring-4 focus-visible:ring-primary-100'
-    ),
+    select({
+      size,
+    }),
     className
   );
 
-  const optionsClassNames = clsx(
-    'absolute mt-[5px] max-h-60 w-full overflow-auto rounded-md bg-white py-1 shadow-lg ring-1 ring-gray-200 focus:outline-none'
-  );
+  const optionsClassNames = selectOptions();
 
   const optionContainerClassNames = (active: boolean) =>
     clsx(
