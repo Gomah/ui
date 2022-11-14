@@ -39,7 +39,7 @@ __metadata:
     "@testing-library/react-hooks": 8.0.1
     "@testing-library/user-event": 14.4.3
     "@types/react": 18.0.25
-    "@types/react-dom": 18.0.8
+    "@types/react-dom": 18.0.9
     "@types/sync-fetch": 0.4.0
     "@vanilla-extract/css": 1.9.1
     "@vanilla-extract/esbuild-plugin": 2.2.0
@@ -59,9 +59,9 @@ __metadata:
     sync-fetch: 0.4.2
     tailwind-merge: 1.8.0
     tailwindcss: 3.2.4
-    tsup: 6.4.0
+    tsup: 6.5.0
     typescript: 4.8.4
-    vitest: 0.25.1
+    vitest: 0.25.2
   languageName: unknown
   linkType: soft
 
@@ -73,7 +73,7 @@ __metadata:
     "@swc/core": 1.3.16
     tailwindcss: 3.2.4
     ts-deepmerge: 5.0.0
-    tsup: 6.4.0
+    tsup: 6.5.0
   languageName: unknown
   linkType: soft
 
@@ -82,7 +82,7 @@ __metadata:
   resolution: "@acme/tokens@workspace:packages/tokens"
   dependencies:
     "@swc/core": 1.3.16
-    tsup: 6.4.0
+    tsup: 6.5.0
   languageName: unknown
   linkType: soft
 
@@ -3178,12 +3178,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.0.8, @types/react-dom@npm:^18.0.0":
-  version: 18.0.8
-  resolution: "@types/react-dom@npm:18.0.8"
+"@types/react-dom@npm:18.0.9, @types/react-dom@npm:^18.0.0":
+  version: 18.0.9
+  resolution: "@types/react-dom@npm:18.0.9"
   dependencies:
     "@types/react": "*"
-  checksum: 522e5e949d05f35c6037a2290838c9c7ff92a9d06f7d96b993c7c3f5a86d8f3a6337e059c94e6fb0920227f445e5d1ce10fbfe3d9bbd95fb82a5539249d90646
+  checksum: e744e3feba25fc43733289d4df4d9c0e59fcca7f34e8c89d75f81a339accb2bd70236d69382d47d2c0ad06a1529b2e56aa6171fe175854d60e07156ddceedfcb
   languageName: node
   linkType: hard
 
@@ -12192,7 +12192,7 @@ __metadata:
     "@remix-run/serve": 1.7.5
     "@remix-run/vercel": 1.7.5
     "@types/react": 18.0.25
-    "@types/react-dom": 18.0.8
+    "@types/react-dom": 18.0.9
     "@vercel/node": 2.6.2
     autoprefixer: 10.4.13
     concurrently: 7.5.0
@@ -13813,9 +13813,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsup@npm:6.4.0":
-  version: 6.4.0
-  resolution: "tsup@npm:6.4.0"
+"tsup@npm:6.5.0":
+  version: 6.5.0
+  resolution: "tsup@npm:6.5.0"
   dependencies:
     bundle-require: ^3.1.2
     cac: ^6.7.12
@@ -13845,7 +13845,7 @@ __metadata:
   bin:
     tsup: dist/cli-default.js
     tsup-node: dist/cli-node.js
-  checksum: a8bcb05265783c38e7c3a5c1d849736dda6122fc15ff78f4b76245cfe2bab93e0ddf74487cd5fe52e23d5fc7600dad154d0f5d1ed3dcc6b429b582d1dd4a49c9
+  checksum: 625082f2a2afc63024ddd54f5aca28372a7b4ec4f7c402f8aacefd0c56d8da7250665dbb4097d40edcf2cbd4168d96ed4593ecb903ab36e625628f375980e266
   languageName: node
   linkType: hard
 
@@ -14480,9 +14480,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:0.25.1":
-  version: 0.25.1
-  resolution: "vitest@npm:0.25.1"
+"vitest@npm:0.25.2":
+  version: 0.25.2
+  resolution: "vitest@npm:0.25.2"
   dependencies:
     "@types/chai": ^4.3.3
     "@types/chai-subset": ^1.3.3
@@ -14517,7 +14517,7 @@ __metadata:
       optional: true
   bin:
     vitest: vitest.mjs
-  checksum: 9f0bfc8a55fe71722a63c4c85d6d41a1ac08b2d5fb6bfeafbed4af1364e53e7a94d6768aa49c4c5940d863726a6a06f11ff9da05de40ef8a1bc2236e209246a9
+  checksum: f41fe7c2c1fe8142ceb90f4d4bebca90c62615c168ff82ea5e797affb8cfd78a49c8900f6d9c552e0da1208961750b6cc705113ad99315e69afba5cd3fdef794
   languageName: node
   linkType: hard
 
