@@ -14,7 +14,7 @@ __metadata:
     eslint-config-prettier: 8.5.0
     eslint-plugin-prettier: 4.2.1
     eslint-plugin-react: 7.31.10
-    typescript: 4.8.4
+    typescript: 4.9.3
   languageName: unknown
   linkType: soft
 
@@ -60,7 +60,7 @@ __metadata:
     tailwind-merge: 1.8.0
     tailwindcss: 3.2.4
     tsup: 6.5.0
-    typescript: 4.8.4
+    typescript: 4.9.3
     vitest: 0.25.2
   languageName: unknown
   linkType: soft
@@ -3509,10 +3509,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/build-utils@npm:5.5.7":
-  version: 5.5.7
-  resolution: "@vercel/build-utils@npm:5.5.7"
-  checksum: bb02cafc8880bc959623bd1e89fe333656249f90fca049b3b63a4497f18cfe75b1eb39329a248ce16e87cbb5ac97a55b9106b5a09e2d2b58e6f4662760e621f0
+"@vercel/build-utils@npm:5.5.8":
+  version: 5.5.8
+  resolution: "@vercel/build-utils@npm:5.5.8"
+  checksum: 725cbbe4b961a68a3e660b8f75cdca911ac8a4e634972e5ff71834c7713f3d8f21cf098a3ad29610376b8b3f3eaa6e079c84c68fd69b15759c34802b146878f9
   languageName: node
   linkType: hard
 
@@ -3523,13 +3523,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vercel/node@npm:2.6.2":
-  version: 2.6.2
-  resolution: "@vercel/node@npm:2.6.2"
+"@vercel/node@npm:2.6.3":
+  version: 2.6.3
+  resolution: "@vercel/node@npm:2.6.3"
   dependencies:
     "@edge-runtime/vm": 2.0.0
     "@types/node": 14.18.33
-    "@vercel/build-utils": 5.5.7
+    "@vercel/build-utils": 5.5.8
     "@vercel/node-bridge": 3.1.2
     "@vercel/static-config": 2.0.6
     edge-runtime: 2.0.0
@@ -3538,7 +3538,7 @@ __metadata:
     node-fetch: 2.6.7
     ts-node: 8.9.1
     typescript: 4.3.4
-  checksum: a3f2d62934c591e26af72175c7e2f46a6b18ddcc7f638a4b35dca195376372850db981bdbb14042e336c4f128ab15e9d35944201daf502736cbb671e688a65ec
+  checksum: 0446a63f140f056802b136bc58077ca61ca0d32f0d5b87d62c5f93664e8fa98cba6b4c5c9a6e3305a5f50f742f06db1a033946feee879cff70f9c15048aa67af
   languageName: node
   linkType: hard
 
@@ -10690,7 +10690,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     tailwindcss: 3.2.4
-    typescript: 4.8.4
+    typescript: 4.9.3
   languageName: unknown
   linkType: soft
 
@@ -12193,7 +12193,7 @@ __metadata:
     "@remix-run/vercel": 1.7.5
     "@types/react": 18.0.25
     "@types/react-dom": 18.0.9
-    "@vercel/node": 2.6.2
+    "@vercel/node": 2.6.3
     autoprefixer: 10.4.13
     concurrently: 7.5.0
     eslint: 8.27.0
@@ -12201,7 +12201,7 @@ __metadata:
     react: 18.2.0
     react-dom: 18.2.0
     tailwindcss: 3.2.4
-    typescript: 4.8.4
+    typescript: 4.9.3
   languageName: unknown
   linkType: soft
 
@@ -14018,13 +14018,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.8.4, typescript@npm:^4.6.4":
-  version: 4.8.4
-  resolution: "typescript@npm:4.8.4"
+"typescript@npm:4.9.3, typescript@npm:^4.6.4":
+  version: 4.9.3
+  resolution: "typescript@npm:4.9.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 3e4f061658e0c8f36c820802fa809e0fd812b85687a9a2f5430bc3d0368e37d1c9605c3ce9b39df9a05af2ece67b1d844f9f6ea8ff42819f13bcb80f85629af0
+  checksum: 17b8f816050b412403e38d48eef0e893deb6be522d6dc7caf105e54a72e34daf6835c447735fd2b28b66784e72bfbf87f627abb4818a8e43d1fa8106396128dc
   languageName: node
   linkType: hard
 
@@ -14038,13 +14038,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.8.4#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
-  version: 4.8.4
-  resolution: "typescript@patch:typescript@npm%3A4.8.4#~builtin<compat/typescript>::version=4.8.4&hash=701156"
+"typescript@patch:typescript@4.9.3#~builtin<compat/typescript>, typescript@patch:typescript@^4.6.4#~builtin<compat/typescript>":
+  version: 4.9.3
+  resolution: "typescript@patch:typescript@npm%3A4.9.3#~builtin<compat/typescript>::version=4.9.3&hash=701156"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 301459fc3eb3b1a38fe91bf96d98eb55da88a9cb17b4ef80b4d105d620f4d547ba776cc27b44cc2ef58b66eda23fe0a74142feb5e79a6fb99f54fc018a696afa
+  checksum: ef65c22622d864497d0a0c5db693523329b3284c15fe632e93ad9aa059e8dc38ef3bd767d6f26b1e5ecf9446f49bd0f6c4e5714a2eeaf352805dc002479843d1
   languageName: node
   linkType: hard
 
