@@ -22,12 +22,14 @@ export type ButtonProps = {
   loading?: boolean;
 
   loadingSpinner?: React.ReactNode;
-} & React.ComponentPropsWithRef<'button'> &
+  as?: React.ElementType<any>;
+} & React.ComponentPropsWithRef<'a' | 'button'> &
   ButtonVariants;
 
 export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildren<ButtonProps>>(
   (
     {
+      as: _as = 'button',
       children,
       className,
       size = 'md',
@@ -42,6 +44,8 @@ export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildre
     },
     ref
   ) => {
+    const Component = _as;
+
     const buttonClasses = twMerge(
       button({
         intent,
@@ -61,7 +65,7 @@ export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildre
     });
 
     return (
-      <button ref={ref} {...props} className={buttonClasses}>
+      <Component ref={ref} {...props} className={buttonClasses}>
         {loading ? (
           loadingSpinner || (
             <svg
@@ -94,7 +98,7 @@ export const Button = React.forwardRef<HTMLButtonElement, React.PropsWithChildre
         ) : (
           children
         )}
-      </button>
+      </Component>
     );
   }
 );
