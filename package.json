@@ -16,7 +16,7 @@
     "@acme/eslint-config-custom": "*",
     "@commitlint/cli": "17.3.0",
     "@commitlint/config-conventional": "17.3.0",
-    "prettier": "2.7.1",
+    "prettier": "2.8.0",
     "turbo": "1.6.3"
   },
   "engines": {
