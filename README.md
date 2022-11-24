@@ -1,18 +1,20 @@
-# UI Stuff
+# UI Playground
 
-Just a play around with components, tired to create these little pieces all the time, hopefully this can be a strong base in the future.
+[Ladle](https://acme-ui-react.vercel.app/)
+
+Just a playground with components, tired to create these little pieces all the time, maybe this can be a strong base in the future.
 
 ### Todo
 
-- Define foundations (tokens), although TailwindCSS have pretty good defaults
+- Define foundations (tokens) (in W3C Design token format), although TailwindCSS have pretty good defaults?
+- Make components more polymorphic
 
-### Existential questions
+### Random questions for myself
 
-- How do we define multiple variants combination? It currently feels like a limitation and doesn't feel super right, a bit weird to declare variants theme based in `Button.tsx` or `Badge.tex`... Is tailwind the right tool?
-- Use tailwindcss or Vanilla extract?
-- Use radix? If yes, with tailwindcss or Vanilla extract?
-- Use twmerge (if using tailwindcss ?)
+- Is tailwindcss + Vanilla extract the right combo?
+- Use radix? If yes, how do we combine it with tailwindcss or Vanilla extract?
 - Use css module? Is it good/best practices to use it with tailwindcss?
-- How to make it customisable ? Probably need to make something work first to then think about it.
+- How to make it customisable? Probably need to make something work first to then think about it.
 - package.json per component?
 - How to make sure components are tree-shakable?
+- Support multiple frameworks?
