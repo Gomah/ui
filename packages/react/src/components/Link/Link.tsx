@@ -5,8 +5,8 @@ import { link, LinkVariants } from './Link.css';
 export type LinkProps = React.ComponentPropsWithRef<'a'> & LinkVariants;
 
 export const Link = React.forwardRef<HTMLAnchorElement, LinkProps>(
-  ({ size = 'md', weight = 'regular', className, children, ...props }, ref) => {
-    const textClass = twMerge(link({ size, weight }), className);
+  ({ size = 'md', weight = 'regular', className, intent = 'primary', children, ...props }, ref) => {
+    const textClass = twMerge(link({ size, weight, intent }), className);
 
     return (
       <a ref={ref} {...props} className={textClass}>

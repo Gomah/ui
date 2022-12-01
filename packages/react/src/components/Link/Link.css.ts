@@ -1,9 +1,11 @@
 import { recipe, RecipeVariants } from '@vanilla-extract/recipes';
 
 export const link = recipe({
-  base: ['text-primary-600'],
-
   variants: {
+    intent: {
+      primary: 'text-primary-600',
+    },
+
     size: {
       xs: 'text-xs',
       sm: 'text-sm',
@@ -20,6 +22,7 @@ export const link = recipe({
   },
 
   defaultVariants: {
+    intent: 'primary',
     size: 'md',
     weight: 'regular',
   },
